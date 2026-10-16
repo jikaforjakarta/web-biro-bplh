@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Biro Pembangunan dan Lingkungan Hidup - Provinsi DKI Jakarta</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="icon" href="logo_bplh.jpg">
+<style>
+:root{--g:#0a9b4a;--g2:#065f46;--o:#ff7a00;--bg:#f4faf6;--card:#fff;--tx:#10261a;--mut:#5b6e63;--line:#dcebe1;--sh:0 10px 30px rgba(6,95,70,.10);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+:root:not([data-theme="light"]){color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1711;--card:#12241a;--tx:#e8f5ec;--mut:#9db3a5;--line:#21392c;--sh:0 10px 30px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--bg:#0b1711;--card:#12241a;--tx:#e8f5ec;--mut:#9db3a5;--line:#21392c;--sh:0 10px 30px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--tx);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+/* header */
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--card) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;line-height:1.15}
+.logo img{width:48px;height:48px;border-radius:4px;object-fit:cover;flex:none;box-shadow:0 6px 16px rgba(6,95,70,.25);transition:transform .3s}
+.logo:hover img{transform:rotate(-6deg) scale(1.08)}
+.logo small{display:block;color:var(--o);font-weight:600;font-size:.82rem}
+nav.top{display:flex;gap:4px;align-items:center}
+.ni{position:relative}
+.nl{background:none;border:0;font:inherit;font-weight:600;padding:10px 16px;border-radius:999px;cursor:pointer;color:var(--tx);transition:.25s}
+.nl:hover,.nl.on{background:rgba(10,155,74,.12);color:var(--g)}
+.dd{position:absolute;top:100%;left:0;min-width:230px;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh);padding:8px;opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s}
+.ni:hover .dd,.ni:focus-within .dd{opacity:1;visibility:visible;transform:none}
+.dd a{display:block;padding:10px 14px;border-radius:12px;font-weight:600;font-size:.93rem}
+.dd a:hover{background:rgba(255,122,0,.12);color:var(--o);padding-left:20px}
+.dd a{transition:.2s}
+/* bottom nav */
+#bar{display:none}
+#sheet{position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--card);border-radius:26px 26px 0 0;padding:18px 18px calc(100px + env(safe-area-inset-bottom,0px));box-shadow:0 -20px 50px rgba(0,0,0,.25);transform:translateY(110%);transition:.35s cubic-bezier(.2,.9,.3,1)}
+#sheet.open{transform:none}
+#sheet h4{margin-bottom:8px}
+#sheet a{display:block;padding:13px 14px;border-radius:14px;font-weight:600}
+#sheet a:active{background:rgba(10,155,74,.12)}
+#veil{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:60;opacity:0;visibility:hidden;transition:.3s}
+#veil.open{opacity:1;visibility:visible}
+@media (max-width:900px){
+ nav.top{display:none}
+ #bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--card);border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px));justify-content:space-around;box-shadow:0 -8px 24px rgba(0,0,0,.08)}
+ #bar button{background:none;border:0;font:inherit;font-size:.78rem;font-weight:600;color:var(--mut);display:flex;flex-direction:column;align-items:center;gap:4px;padding:2px 10px;cursor:pointer}
+ #bar button b{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#ff7a00,#ff9a3c);display:grid;place-items:center;font-size:21px;transition:.3s;box-shadow:0 6px 14px rgba(255,122,0,.3)}
+ #bar button.on{color:var(--o)}
+ #bar button.on b{transform:translateY(-6px) scale(1.08)}
+ body{padding-bottom:96px}
+}
+/* buttons + bubble */
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font:inherit;font-weight:700;padding:13px 26px;border-radius:999px;color:#fff;background:linear-gradient(135deg,var(--g),#18c46a);box-shadow:0 8px 20px rgba(10,155,74,.35);transition:transform .25s,box-shadow .25s}
+.btn.o{background:linear-gradient(135deg,var(--o),#ff9a3c);box-shadow:0 8px 20px rgba(255,122,0,.35)}
+.btn.w{background:var(--card);color:var(--g2);box-shadow:var(--sh)}
+.btn:hover{transform:translateY(-3px) scale(1.03)}
+.btn:active{transform:scale(.96)}
+.bubble{position:absolute;border-radius:50%;pointer-events:none;background:rgba(255,255,255,.55);transform:scale(0);animation:bub .7s ease-out forwards}
+@keyframes bub{to{transform:scale(4);opacity:0}}
+.rise{position:absolute;bottom:-8px;border-radius:50%;pointer-events:none;border:1.5px solid rgba(255,255,255,.8);background:rgba(255,255,255,.25);animation:rise 1s ease-out forwards}
+@keyframes rise{to{transform:translateY(-46px);opacity:0}}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:70px 0 90px;background:radial-gradient(circle at 80% 10%,rgba(255,122,0,.16),transparent 40%),radial-gradient(circle at 10% 30%,rgba(10,155,74,.2),transparent 45%)}
+.blob{position:absolute;border-radius:50%;filter:blur(8px);opacity:.5;animation:float 9s ease-in-out infinite}
+.blob.a{width:180px;height:180px;background:rgba(24,196,106,.3);top:40px;right:8%}
+.blob.b{width:110px;height:110px;background:rgba(255,122,0,.3);bottom:50px;left:6%;animation-delay:-3s}
+@keyframes float{50%{transform:translateY(-28px) translateX(14px)}}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;position:relative}
+.chip{display:inline-flex;gap:8px;align-items:center;padding:7px 16px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-weight:600;font-size:.88rem;color:var(--g2);box-shadow:var(--sh)}
+.chip:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--g);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{transform:scale(1.8);opacity:.4}}
+h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.12;font-weight:800;margin:18px 0}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--o),#ffb347);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--mut);font-size:1.08rem;max-width:560px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.orb{aspect-ratio:1;max-width:420px;margin:auto;border-radius:44% 56% 52% 48%/50% 44% 56% 50%;background:linear-gradient(135deg,var(--g),#7ddc9b 60%,#ffd27a);display:grid;place-items:center;font-size:7rem;animation:morph 8s ease-in-out infinite;box-shadow:0 30px 60px rgba(10,155,74,.3);position:relative;width:100%}
+.orb span{animation:float 5s ease-in-out infinite}
+.orb u{position:absolute;text-decoration:none;background:var(--card);color:var(--tx);font-size:.85rem;font-weight:700;padding:8px 14px;border-radius:14px;box-shadow:var(--sh);animation:float 6s ease-in-out infinite}
+@keyframes morph{50%{border-radius:56% 44% 40% 60%/42% 58% 42% 58%}}
+@media (max-width:900px){.hg{grid-template-columns:1fr}.orb{max-width:260px;font-size:4.5rem}}
+/* sections */
+section{padding:56px 0}
+.st{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;margin-bottom:8px}
+.ss{color:var(--mut);margin-bottom:28px;max-width:620px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--sh);transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(10,155,74,.18);border-color:var(--g)}
+.ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:26px;background:linear-gradient(135deg,rgba(10,155,74,.16),rgba(255,122,0,.16));margin-bottom:14px}
+.card h3{font-size:1.08rem;margin-bottom:6px}
+.card p{color:var(--mut);font-size:.94rem}
+.tag{display:inline-block;font-size:.76rem;font-weight:700;color:var(--o);background:rgba(255,122,0,.12);padding:3px 12px;border-radius:999px;margin-bottom:8px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:-50px;position:relative}
+.stat{background:var(--card);border-radius:22px;padding:22px;text-align:center;box-shadow:var(--sh);border:1px solid var(--line)}
+.stat b{display:block;font-size:2rem;font-weight:800;color:var(--g)}
+.stat span{color:var(--mut);font-size:.88rem}
+.band{background:linear-gradient(135deg,var(--g2),var(--g));color:#fff;border-radius:32px;padding:44px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;position:relative;overflow:hidden}
+.band h2{max-width:520px}
+.pg{padding:44px 0 24px;background:linear-gradient(135deg,rgba(10,155,74,.14),rgba(255,122,0,.10))}
+.crumb{color:var(--mut);font-size:.88rem;font-weight:600}
+.pg h1{font-size:clamp(1.8rem,4vw,2.6rem);margin:6px 0 0}
+.ul{list-style:none;padding:0;display:grid;gap:12px}
+.ul li{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 18px;display:flex;gap:14px;align-items:center;justify-content:space-between;transition:.25s}
+.ul li:hover{transform:translateX(6px);border-color:var(--g)}
+.nb{counter-increment:n}
+ol.ul{counter-reset:n}
+ol.ul li:before{counter-increment:n;content:counter(n);flex:none;width:34px;height:34px;border-radius:50%;background:var(--g);color:#fff;display:grid;place-items:center;font-weight:800}
+ol.ul li{justify-content:flex-start}
+
+/* ===== Avatar (inisial & foto) ===== */
+.av{position:relative;width:96px;height:96px;border-radius:50%;margin:0 auto 14px;background:linear-gradient(135deg,var(--g),#ffb347);display:grid;place-items:center;font-size:2.2rem;color:#fff;font-weight:800;border:4px solid var(--card);box-shadow:0 0 0 3px var(--g)}
+/* versi foto: cincin gradasi hijau-oranye + glow lembut */
+.av.has-img{
+  width:132px;height:132px;padding:0;overflow:visible;
+  background:conic-gradient(from 210deg,var(--g),#18c46a,#ffb347,var(--o),var(--g));
+  border:0;
+  box-shadow:0 14px 32px rgba(10,155,74,.28),0 4px 10px rgba(255,122,0,.18);
+  transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s;
+}
+.av.has-img:before{ /* jarak putih antara cincin dan foto */
+  content:"";position:absolute;inset:4px;border-radius:50%;background:var(--card);z-index:0
+}
+.av.has-img:after{ /* highlight kaca tipis di atas foto */
+  content:"";position:absolute;inset:8px;border-radius:50%;z-index:2;pointer-events:none;
+  background:linear-gradient(160deg,rgba(255,255,255,.22),transparent 38%);
+}
+.av.has-img img{
+  position:absolute;inset:8px;z-index:1;
+  width:calc(100% - 16px);height:calc(100% - 16px);
+  max-width:none;border-radius:50%;object-fit:cover;object-position:center 18%;display:block;
+  filter:saturate(1.08) contrast(1.04) brightness(1.03);
+  transition:transform .6s cubic-bezier(.2,.8,.2,1);
+}
+.card:hover .av.has-img{transform:translateY(-3px);box-shadow:0 20px 40px rgba(10,155,74,.36),0 6px 14px rgba(255,122,0,.24)}
+.card:hover .av.has-img img{transform:scale(1.06)}
+.av.has-img.lg{width:168px;height:168px}
+.av.has-img.lg+h3{font-size:1.25rem}
+/* kartu pimpinan */
+.card.lead-card{background:linear-gradient(180deg,rgba(10,155,74,.08),transparent 55%),var(--card);padding-top:32px}
+.card.lead-card p{font-weight:600;color:var(--g2)}
+:root[data-theme="dark"] .card.lead-card p{color:var(--g)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .card.lead-card p{color:var(--g)}}
+
+.tc{text-align:center}
+.org,.org ul{list-style:none;padding:0;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.org{flex-direction:column;align-items:center;gap:26px}
+.node{padding:12px 18px;border-radius:16px;background:var(--card);border:2px solid var(--g);font-weight:700;font-size:.9rem;text-align:center;box-shadow:var(--sh)}
+.node.k{background:linear-gradient(135deg,var(--g),#18c46a);color:#fff}
+.node.s{border-color:var(--o);font-weight:600;font-size:.82rem}
+.col{display:flex;flex-direction:column;align-items:center;gap:10px;position:relative}
+.col:before{content:"";width:2px;height:16px;background:var(--g);margin-top:-16px}
+.vl{width:2px;height:22px;background:var(--g)}
+.date{flex:none;width:62px;text-align:center;border-radius:16px;background:linear-gradient(135deg,var(--o),#ff9a3c);color:#fff;padding:8px 0;font-weight:800;line-height:1.1}
+.date small{display:block;font-weight:600;font-size:.7rem}
+form{display:grid;gap:14px}
+input,textarea,select{font:inherit;padding:13px 16px;border-radius:16px;border:1px solid var(--line);background:var(--card);color:var(--tx);width:100%}
+input:focus,textarea:focus{outline:2px solid var(--g)}
+.map{border-radius:24px;min-height:300px;background:linear-gradient(135deg,#cfeedd,#e8f7ee);position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;padding:24px;border:1px solid var(--line)}
+.map:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 39px,rgba(10,155,74,.12) 39px 40px),repeating-linear-gradient(90deg,transparent 0 39px,rgba(10,155,74,.12) 39px 40px)}
+.pin{font-size:3rem;animation:bounce 1.4s infinite;position:relative}
+@keyframes bounce{50%{transform:translateY(-14px)}}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:900px){.two{grid-template-columns:1fr}}
+.soc{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.soc a{padding:8px 16px;border-radius:999px;background:rgba(10,155,74,.12);font-weight:700;font-size:.88rem;transition:.25s}
+.soc a:hover{background:var(--g);color:#fff;transform:translateY(-3px)}
+footer{padding:36px 0 24px;border-top:1px solid var(--line);color:var(--mut);font-size:.9rem;text-align:center}
+.rv{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+#toast{position:fixed;left:50%;top:90px;transform:translate(-50%,-30px);background:var(--g2);color:#fff;padding:12px 22px;border-radius:999px;font-weight:600;opacity:0;transition:.4s;z-index:99}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+/* ===== Tentang Kami ===== */
+.ab{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+.ph{position:relative}
+.ph:before{content:"";position:absolute;inset:18px -18px -18px 18px;border-radius:34px;background:linear-gradient(135deg,#0b2a6b,#38bdf8);z-index:0;transition:.4s;box-shadow:0 18px 40px rgba(11,42,107,.28)}
+.ph:hover:before{inset:10px -10px -10px 10px}
+.ph .fr{position:relative;z-index:1;border-radius:32px;overflow:hidden;aspect-ratio:4/3;border:6px solid var(--card);box-shadow:var(--sh)}
+.ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.ph:hover img{transform:scale(1.07)}
+.fb{position:absolute;z-index:2;left:-16px;bottom:30px;background:var(--card);padding:8px 12px;border-radius:18px;box-shadow:var(--sh);font-weight:800;font-size:.92rem;display:flex;gap:12px;align-items:center;animation:float 6s ease-in-out infinite}
+.fb small{display:block;font-weight:600;color:var(--mut);font-size:.76rem}
+.fb i{font-style:normal;font-size:1.7rem}
+.ab p{color:var(--mut);margin-bottom:14px}
+.ab .st{line-height:1.2;margin:10px 0 16px}
+.ab .st b{color:var(--o)}
+.sc h3{display:flex;align-items:center;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chips span{padding:5px 13px;border-radius:999px;background:rgba(10,155,74,.12);color:var(--g);font-weight:600;font-size:.8rem;transition:.25s;cursor:default}
+.chips span:hover{background:var(--g);color:#fff;transform:translateY(-3px)}
+@media (max-width:900px){
+ .ab{grid-template-columns:1fr;gap:40px}
+ .ph:before{inset:12px -8px -12px 8px}
+ .fb{left:10px;bottom:18px}
+}
+
+</style>
+</head>
+<body>
+    <!--
+<header><div class="wrap hd">
+ <a href="#/" class="logo"><i>🌿</i><span>Biro Pembangunan &amp; Lingkungan Hidup<small>Provinsi DKI Jakarta</small></span></a>
+ <nav class="top" id="top"></nav>
+</div></header>
+-->
+<header><div class="wrap hd">
+<a href="#/" class="logo">
+    <img src="logo_bplh.jpg" alt="Logo BPLH">
+    <span>Biro Pembangunan &amp; Lingkungan Hidup<small>Setda Provinsi DKI Jakarta</small></span>
+</a>
+<nav class="top" id="top"></nav>
+</div></header>
+<main id="main"></main>
+<footer><div class="wrap">© 2026 Biro Pembangunan dan Lingkungan Hidup · Sekretariat Daerah Provinsi DKI Jakarta</div></footer>
+<div id="veil"></div><div id="sheet"></div><div id="bar"></div><div id="toast"></div>
+<script>
+const M=[
+{t:'Beranda',i:'🏠',h:'/'},
+{t:'Profil',i:'🏢',
+    s:[['tentang','Tentang Kami'],['jabatan','Profil Jabatan'],['struktur','Struktur Organisasi'],['visi','Visi & Misi'],['tugas','Tugas & Fungsi'],['regulasi','Kebijakan & Regulasi'],['kontak','Kontak Kami']]},
+{t:'Informasi',i:'📰',
+    s:[['berita','Berita'],['pengaduan','Pengaduan'],['laporan','Laporan'],['pengumuman','Pengumuman'],['agenda','Kalender Agenda'],['ppid','PPID']]},
+{t:'Layanan',i:'🎧',
+    s:[['layanan','Layanan Internal'],['layanan','Layanan Eksternal']]}
+];
+const $=s=>document.querySelector(s);
+const sub=m=>m.s.map(x=>`<a href="#/${x[0]}${x[1].includes('Eksternal')?'/ext':''}">${x[1]}</a>`).join('');
+$('#top').innerHTML=M.map((m,k)=>m.s?`<div class="ni"><button class="nl" data-k="${k}">${m.t} ▾</button><div class="dd">${sub(m)}</div></div>`:`<a class="nl" data-k="${k}" href="#${m.h}">${m.t}</a>`).join('');
+$('#bar').innerHTML=M.map((m,k)=>`<button data-k="${k}"><b>${m.i}</b>${m.t}</button>`).join('');
+function closeS(){$('#sheet').classList.remove('open');$('#veil').classList.remove('open')}
+$('#veil').onclick=closeS;$('#sheet').onclick=e=>{if(e.target.closest('a'))closeS()};
+$('#bar').onclick=e=>{const b=e.target.closest('button');if(!b)return;const m=M[b.dataset.k];if(!m.s){closeS();location.hash=m.h;return}
+ $('#sheet').innerHTML=`<h4>${m.t}</h4>`+sub(m);$('#sheet').classList.add('open');$('#veil').classList.add('open')};
+// bubble effect
+function bubbles(el,x,y){const r=el.getBoundingClientRect(),d=Math.max(r.width,r.height)/3,b=document.createElement('span');b.className='bubble';b.style.cssText=`width:${d}px;height:${d}px;left:${x-r.left-d/2}px;top:${y-r.top-d/2}px`;el.appendChild(b);setTimeout(()=>b.remove(),700)}
+document.addEventListener('pointerdown',e=>{const b=e.target.closest('.btn');if(b)bubbles(b,e.clientX,e.clientY)});
+document.addEventListener('pointerover',e=>{const b=e.target.closest('.btn');if(!b||b.contains(e.relatedTarget))return;for(let i=0;i<5;i++){const s=document.createElement('span'),d=6+Math.random()*10;s.className='rise';s.style.cssText=`width:${d}px;height:${d}px;left:${10+Math.random()*80}%;animation-delay:${i*.08}s`;b.appendChild(s);setTimeout(()=>s.remove(),1200)}});
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2600)}
+// jika foto gagal dimuat, kembali ke avatar inisial
+function imgFail(img){const av=img.parentElement;av.classList.remove('has-img','lg');av.textContent=img.alt?img.alt[0]:'?'}
+// helpers
+const hd=(c,t)=>`<div class="pg"><div class="wrap"><div class="crumb">${c}</div><h1>${t}</h1></div></div>`;
+const W=h=>`<section><div class="wrap">${h}</div></section>`;
+const cards=a=>`<div class="grid">${a.map(c=>`<div class="card rv"><div class="ic">${c[0]}</div><h3>${c[1]}</h3><p>${c[2]}</p></div>`).join('')}</div>`;
+const ol=a=>`<ol class="ul">${a.map(x=>`<li class="rv">${x}</li>`).join('')}</ol>`;
+const news=[['Kolaborasi','Rapat Koordinasi Program Pengelolaan Lingkungan Hidup 2026','12 Okt 2026'],['Pembangunan','Monitoring Capaian Pembangunan Triwulan III','08 Okt 2026'],['Lingkungan','Kampanye Jakarta Bersih dan Hijau Bersama Perangkat Daerah','01 Okt 2026']];
+const P={
+home:()=>`  <div class="hero">
+                <div class="blob a"></div>
+                <div class="blob b"></div>
+                <div class="wrap hg">
+                    <div>
+                        <span class="chip">Selamat datang di website resmi</span>
+                        <h1>Membangun <em>Jakarta</em> yang hijau, tertata, dan berkelanjutan</h1>
+                        <p class="lead">Biro Pembangunan dan Lingkungan Hidup mengoordinasikan, merumuskan dan menyusun kebijakan, pemantauan dan evaluasi pelaksanaan kebijakan dan pengoordinasian pelaksanaan tugas Perangkat Daerah di Provinsi DKI Jakarta.</p>
+                        <div class="cta">
+                            <a class="btn" href="#/tentang">Kenali Kami →</a>
+                            <a class="btn o" href="#/layanan">Lihat Layanan</a>
+                        </div>
+                    </div>
+                    <div class="orb">
+                        <span>🌳🏢</span>
+                        <u style="top:8%;left:-4%">♻️ Lingkungan</u>
+                        <u style="bottom:10%;right:-2%;animation-delay:-2s">🏗️ Pembangunan</u>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="wrap">
+                <div class="stats">${[['25','Program Strategis'],
+                ['40','Perangkat Daerah Mitra'],
+                ['120','Dokumen Layanan'],
+                ['98','% Capaian Kinerja']]
+                .map(s=>`   <div class="stat rv">
+                                <b data-n="${s[0]}">0</b>
+                                <span>${s[1]}</span>
+                            </div>`).join('')}
+                </div>
+            </div>
+            -->
+${W(`<h2 class="st">Fokus Kerja Kami</h2>
+        <p class="ss">Empat pilar utama yang kami jalankan.</p>`
+        +cards([['🌱','Lingkungan Hidup','Koordinasi kebijakan dan pengendalian kualitas lingkungan.'],
+        ['🏗️','Pembangunan','Sinkronisasi dan pemantauan program pembangunan daerah.'],
+        ['📊','Monitoring & Evaluasi','Pengukuran capaian kinerja secara terukur dan transparan.'],
+        ['🤝','Kolaborasi','Kemitraan lintas perangkat daerah dan pemangku kepentingan.']]))}
+${W(`<h2 class="st">Layanan Cepat</h2>
+        <p class="ss">Akses sistem internal dan eksternal dengan satu klik.</p>
+        <div class="cta" style="margin:0">
+            <a class="btn" href="#/layanan">SIMPELMON</a>
+            <a class="btn o" href="#/layanan">Absen Rabu Transum</a>
+            <a class="btn w" href="#/layanan">JIKA</a>
+            <a class="btn w" href="#/layanan">e-Monev</a>
+        </div>`)}
+${W(`<h2 class="st">Berita Terbaru</h2>
+<p class="ss">Kegiatan dan informasi terkini (contoh konten).</p>
+<div class="grid">
+    ${news.map(n=>`<div class="card rv">
+                    <span class="tag">${n[0]}</span>
+                    <h3>${n[1]}</h3>
+                    <p>${n[2]}</p>
+                    </div>`).join('')}
+                    </div>`)}
+${W(`<div class="band rv">
+    <h2>Punya pengaduan atau masukan? <br> Kami siap mendengar.</h2>
+    <a class="btn w" href="#/pengaduan">Sampaikan Pengaduan</a>
+    </div>`)}`,
+    tentang:()=>hd('Profil','Tentang Kami')
++W(`<div class="ab">
+  <div class="ph rv">
+    <div class="fr"><img src="biro.jpeg" alt="Keluarga Besar Biro Pembangunan dan Lingkungan Hidup" loading="lazy"></div>
+    <div class="fb"><i>🌳</i><div>Keluarga Besar Biro PLH<small>Setda Provinsi DKI Jakarta</small></div></div>
+  </div>
+  <div class="rv">
+    <span class="tag">Mengenal Kami</span>
+    <h2 class="st">Bersama membangun Jakarta yang hijau dan berkelanjutan</h2>
+    <p>Biro Pembangunan dan Lingkungan Hidup mempunyai tugas mengoordinasikan, merumuskan dan menyusun kebijakan, pemantauan dan evaluasi pelaksanaan kebijakan, serta pengoordinasian pelaksanaan tugas Perangkat Daerah penyelenggara urusan pemerintahan di bidang pembangunan dan lingkungan hidup.</p>
+    <p>Dengan semangat kolaborasi dan inovasi digital, biro ini berupaya memastikan program pembangunan berjalan selaras dengan prinsip keberlanjutan demi Jakarta yang hijau, nyaman, dan berdaya saing.</p>
+    <div class="cta">
+      <a class="btn" href="#/visi">Visi &amp; Misi</a>
+      <a class="btn o" href="#/tugas">Tugas &amp; Fungsi</a>
+    </div>
+  </div>
+</div>`)
++W(`<h2 class="st">Lingkup Urusan Kami</h2>
+<p class="ss">Bidang pemerintahan yang kami koordinasikan, pantau, dan evaluasi.</p>
+<div class="grid">${[
+ ['🏗️','Pekerjaan Umum & Penataan Ruang',['Jalan','Sumber Daya Air','Air Minum','Air Limbah','Drainase','Bangunan Gedung','Penataan Bangunan & Lingkungannya','Penataan Ruang','Jasa Konstruksi','Permukiman','Persampahan']],
+ ['🏘️','Perumahan Rakyat & Kawasan Permukiman',['Perumahan Rakyat','Kawasan Permukiman']],
+ ['🌱','Lingkungan Hidup',['Lingkungan Hidup','Kehutanan','Pertanahan']],
+ ['💡','Penerangan Jalan, Utilitas & Transportasi',['Penerangan Jalan Umum','Jaringan Utilitas','Infrastruktur Transportasi']]
+].map(c=>`<div class="card sc rv"><div class="ic">${c[0]}</div><h3>${c[1]}</h3><div class="chips">${c[2].map(x=>`<span>${x}</span>`).join('')}</div></div>`).join('')}</div>`)
++W(`<div class="band rv"><h2>Hijau, nyaman, dan berdaya saing. Mari berkolaborasi bersama kami.</h2><a class="btn w" href="#/kontak">Hubungi Kami</a></div>`),
+
+jabatan:()=>{
+const p=(n,j,f,lead)=>`<div class="card tc rv${lead?' lead-card':''}">
+    <div class="av${f?' has-img':''}${f&&lead?' lg':''}">${f?`<img src="${f}" alt="${n}" loading="lazy" onerror="imgFail(this)">`:n[0]}</div>
+    <h3>${n}</h3>
+    <p>${j}</p>
+</div>`;
+
+const kepala={n:'Iwan Kurniawan',j:'Kepala Biro Pembangunan dan Lingkungan Hidup',f:'img/Iwan_Kurniawan.png'};
+
+const kelompok=[
+ {
+  nama:'Kelompok Pekerjaan Umum dan Perumahan Rakyat',
+  ketua:{n:'Rachmat Mulyadi',j:'Ketua Kelompok Pekerjaan Umum dan Perumahan Rakyat',f:'img/Rachmat_Mulyadi.png'},
+  sub:[
+   {n:'Fitria',j:'Ketua Subkelompok Bina Marga dan Infrastruktur Transportasi',f:'img/Fitria.png'},
+   {n:'Yosi Lusia',j:'Ketua Subkelompok Sumber Daya Air',f:'img/Yosi.png'},
+   {n:'Wenny Kustianingrum',j:'Ketua Subkelompok Perumahan Rakyat dan Kawasan Permukiman',f:'img/Wenny.png'}
+  ]
+ },
+ {
+  nama:'Kelompok Lingkungan Hidup dan Ruang Terbuka Hijau',
+  ketua:{n:'Sri Achyati',j:'Ketua Kelompok Lingkungan Hidup dan Ruang Terbuka Hijau',f:'img/Sri_Achyati.png'},
+  sub:[
+   {n:'Martiningtyas Yunitasari',j:'Ketua Subkelompok Kebersihan',f:'img/Martiningtyas.png'},
+   {n:'Safira Astari',j:'Ketua Subkelompok Lingkungan Hidup',f:'img/Safira.png'},
+   {n:'Nofrida',j:'Ketua Subkelompok Ruang Terbuka Hijau',f:'img/Nofrida.png'}
+  ]
+ },
+ {
+  nama:'Kelompok Pembangunan Kota',
+  ketua:{n:'Tri Rahayu P',j:'Ketua Kelompok Pembangunan Kota',f:'img/Tri_R_Pardianto.png'},
+  sub:[
+   {n:'Abung Hary Prayogo',j:'Kepala Subbagian Tata Usaha',f:'img/Abung_Hary_Prayogo.png'},
+   {n:'Riko Apriatresnayanto',j:'Ketua Subkelompok Pemantauan Program Pembangunan',f:'img/Riko.png'},
+   {n:'Eurika Putri Andita',j:'Ketua Subkelompok Pengendalian Penyelesaian Kewajiban',f:'img/Eurika_Putri_Andita.png'}
+  ]
+ },
+ {
+  nama:'Kelompok Penataan Ruang, Cipta Karya dan Pertanahan',
+  ketua:{n:'Zulfikri Alaidrus',j:'Ketua Kelompok Penataan Ruang, Cipta Karya dan Pertanahan',f:'img/Zulfikri.png'},
+  sub:[
+   {n:'Resfaniarto Indraka',j:'Ketua Subkelompok Bangunan Gedung',f:'img/Resfaniarto_Indraka.png'},
+   {n:'Mustiannis Syafaah',j:'Ketua Subkelompok Pengendalian Ruang dan Pertanahan',f:'img/Mustiannis.png'},
+   {n:'Dede Julfikar',j:'Ketua Subkelompok Pemanfaatan Ruang',f:'img/Dede.png'}
+  ]
+ }
+];
+
+return hd('Profil','Profil Jabatan')
++W(`<div class="grid" style="max-width:360px;margin:0 auto 28px">
+${p(kepala.n,kepala.j,kepala.f,true)}
+</div>
+${kelompok.map(k=>`
+<h3 class="st" style="font-size:1.3rem;margin-top:48px">${k.nama}</h3>
+<br>
+<div class="grid">
+${p(k.ketua.n,k.ketua.j,k.ketua.f)}
+</div>
+<br>
+<div class="grid">
+${k.sub.map(s=>p(s.n,s.j,s.f)).join('')}
+</div>`).join('')}`)},
+                
+struktur:()=>hd('Profil','Struktur Organisasi')+W(`<div style="overflow-x:auto;padding-bottom:12px"><ul class="org rv" style="min-width:760px"><li><div class="node k">Kepala Biro</div></li><li><div class="vl"></div></li><li><ul>${[1,2,3].map(i=>`<li class="col"><div class="node">Ketua Kelompok Substansi ${i}</div><div class="node s">Sub Kelompok ${i}.1</div><div class="node s">Sub Kelompok ${i}.2</div></li>`).join('')}</ul></li></ul></div><p class="ss">Bagan contoh, sesuaikan dengan struktur resmi.</p>`),
+visi:()=>hd('Profil','Visi & Misi')+W(`<div class="band rv" style="margin-bottom:28px"><div><h3>VISI</h3><h2>Terwujudnya pembangunan dan lingkungan hidup Jakarta yang berkelanjutan dan berdaya saing.</h2></div></div><h3 class="st">Misi</h3>`+ol(['Memperkuat perencanaan dan koordinasi pembangunan daerah.','Meningkatkan pengendalian dan pengelolaan lingkungan hidup.','Mengoptimalkan monitoring dan evaluasi berbasis data.','Mendorong inovasi layanan digital yang transparan.'])),
+tugas:()=>hd('Profil','Tugas & Fungsi')+W(`<div class="two"><div><h3 class="st">Tugas</h3>${ol(['Menyusun kebijakan teknis di bidang pembangunan dan lingkungan hidup.','Mengoordinasikan pelaksanaan program lintas perangkat daerah.'])}</div><div><h3 class="st">Fungsi</h3>${ol(['Perumusan kebijakan','Koordinasi dan sinkronisasi','Pemantauan dan evaluasi','Pelaporan dan pengelolaan informasi'])}</div></div>`),
+regulasi:()=>hd('Profil','Kebijakan & Regulasi')+W(`<ul class="ul">${['Peraturan Gubernur tentang Organisasi dan Tata Kerja','Peraturan Daerah tentang Pengelolaan Lingkungan Hidup','Keputusan Gubernur tentang Program Strategis Daerah','Peraturan Gubernur tentang Pelayanan Informasi Publik'].map(x=>`<li class="rv"><span>📄 ${x}</span><a class="btn" href="#" onclick="toast('Tautkan file dokumen resmi');return false">Unduh</a></li>`).join('')}</ul>`),
+kontak:()=>hd('Profil','Kontak Kami')+W(`<div class="two"><div class="map rv"><div><div class="pin">📍</div><h3>Balai Kota DKI Jakarta</h3><p>Jl. Medan Merdeka Selatan No. 8-9, Jakarta Pusat 10110</p><br><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Balai+Kota+DKI+Jakarta">Buka di Google Maps</a></div></div><div class="card rv"><h3>Informasi Kontak</h3><br><p>📍 Gedung Blok G Lt. 7, Balai Kota DKI Jakarta (sesuaikan)</p><p>📞 (021) 0000 0000</p><p>✉️ biroplh@jakarta.go.id</p><p>🕗 Senin–Jumat, 08.00–16.00 WIB</p><div class="soc"><a href="#">Instagram</a><a href="#">X / Twitter</a><a href="#">YouTube</a><a href="#">Facebook</a></div></div></div>`),
+berita:()=>hd('Informasi','Berita')+W(`<div class="grid">${[...news,...news].map(n=>`<div class="card rv"><span class="tag">${n[0]}</span><h3>${n[1]}</h3><p>${n[2]}</p></div>`).join('')}</div>`),
+pengaduan:()=>hd('Informasi','Pengaduan')+W(`<div class="card rv" style="max-width:640px;margin:auto"><form onsubmit="event.preventDefault();toast('Pengaduan terkirim (demo)');this.reset()"><input required placeholder="Nama lengkap"><input required type="email" placeholder="Email"><select><option>Lingkungan Hidup</option><option>Pembangunan</option><option>Layanan Informasi</option></select><textarea required rows="5" placeholder="Isi pengaduan"></textarea><button class="btn o" type="submit">Kirim Pengaduan</button></form></div>`),
+laporan:()=>hd('Informasi','Laporan')+W(`<ul class="ul">${['Laporan Kinerja Instansi Pemerintah (LKjIP) 2025','Laporan Triwulan III 2026','Laporan Monitoring Program Strategis 2026','Laporan Keuangan Tahunan 2025'].map(x=>`<li class="rv"><span>📑 ${x}</span><a class="btn" href="#" onclick="toast('Tautkan file laporan');return false">Lihat</a></li>`).join('')}</ul>`),
+pengumuman:()=>hd('Informasi','Pengumuman')+W(`<ul class="ul">${['Jadwal Layanan Selama Libur Nasional','Pembaruan Sistem SIMPELMON','Undangan Rapat Koordinasi Bulanan','Pengumuman Hasil Seleksi Kegiatan'].map((x,i)=>`<li class="rv"><span>📢 ${x}</span><small>${15-i*3} Okt 2026</small></li>`).join('')}</ul>`),
+agenda:()=>hd('Informasi','Kalender Agenda')+W(`<ul class="ul">${[['20','Rapat Koordinasi Lingkungan Hidup'],['24','Monev Program Triwulan IV'],['28','Sosialisasi Layanan Digital'],['31','Evaluasi Kinerja Bulanan']].map(a=>`<li class="rv"><div class="date">${a[0]}<small>OKT</small></div><span style="flex:1">${a[1]}</span><small>09.00 WIB</small></li>`).join('')}</ul>`),
+ppid:()=>hd('Informasi','PPID')+W(`<p class="ss">Pejabat Pengelola Informasi dan Dokumentasi: layanan keterbukaan informasi publik.</p>`+cards([['🗓️','Informasi Berkala','Informasi yang diumumkan secara rutin.'],['⚡','Informasi Serta-Merta','Informasi yang berpotensi mengancam hajat hidup orang banyak.'],['📂','Informasi Setiap Saat','Informasi yang wajib tersedia setiap saat.'],['✍️','Permohonan Informasi','Ajukan permohonan informasi publik secara resmi.']])),
+layanan:()=>hd('Layanan','Layanan')+W(`<h3 class="st" id="int">Layanan Internal</h3><br><div class="grid">${[['📈','SIMPELMON','Sistem pemantauan dan evaluasi kinerja.','#'],['🗓️','Absen Rabu Transum','Presensi kegiatan Rabu Transum.','#']].map(l=>`<div class="card rv"><div class="ic">${l[0]}</div><h3>${l[1]}</h3><p>${l[2]}</p><br><a class="btn" target="_blank" rel="noopener" href="${l[3]}">Buka Web</a></div>`).join('')}</div><br><h3 class="st" id="ext" style="margin-top:20px">Layanan Eksternal</h3><br><div class="grid">${[['📚','JIKA','Jakarta Knowledge &amp; Policy Hub.','https://jika.jakarta.go.id'],['🎯','e-Monev','Sistem monitoring dan evaluasi elektronik.','#']].map(l=>`<div class="card rv"><div class="ic">${l[0]}</div><h3>${l[1]}</h3><p>${l[2]}</p><br><a class="btn o" target="_blank" rel="noopener" href="${l[3]}">Kunjungi</a></div>`).join('')}</div><p class="ss" style="margin-top:20px">Tautan SIMPELMON, Absen, dan e-Monev masih "#", ganti dengan URL aslinya.</p>`)
+};
+let io;
+function route(){const [id,x]=(location.hash.replace('#/','')||'home').split('/');const k=P[id]?id:'home';
+ $('#main').innerHTML=P[k]();window.scrollTo(0,0);closeS();
+ const cur=k==='home'?0:M.findIndex(m=>m.s&&m.s.some(s=>s[0]===k));
+ document.querySelectorAll('[data-k]').forEach(e=>e.classList.toggle('on',+e.dataset.k===cur));
+ io&&io.disconnect();io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);const n=e.target.querySelector('[data-n]');if(n)count(n)}}),{threshold:.15});
+ document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+ if(x==='ext')setTimeout(()=>$('#ext')?.scrollIntoView(),50)}
+function count(n){const t=+n.dataset.n;let c=0;const s=setInterval(()=>{c+=Math.ceil(t/30);if(c>=t){c=t;clearInterval(s)}n.textContent=c},35)}
+addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>
