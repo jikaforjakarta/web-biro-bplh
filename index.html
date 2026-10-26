@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Biro Pembangunan dan Lingkungan Hidup - Provinsi DKI Jakarta</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="icon" href="logo_bplh.jpg">
+<style>
+:root{--g:#0a9b4a;--g2:#065f46;--o:#ff7a00;--bg:#f4faf6;--card:#fff;--tx:#10261a;--mut:#5b6e63;--line:#dcebe1;--sh:0 10px 30px rgba(6,95,70,.10);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+:root:not([data-theme="light"]){color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1711;--card:#12241a;--tx:#e8f5ec;--mut:#9db3a5;--line:#21392c;--sh:0 10px 30px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--bg:#0b1711;--card:#12241a;--tx:#e8f5ec;--mut:#9db3a5;--line:#21392c;--sh:0 10px 30px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--tx);line-height:1.6;overflow-x:hidden}
+body.lock{overflow:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+/* header */
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--card) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;line-height:1.15}
+.logo img{width:48px;height:48px;border-radius:4px;object-fit:cover;flex:none;box-shadow:0 6px 16px rgba(6,95,70,.25);transition:transform .3s}
+.logo:hover img{transform:rotate(-6deg) scale(1.08)}
+.logo small{display:block;color:var(--o);font-weight:600;font-size:.82rem}
+nav.top{display:flex;gap:4px;align-items:center}
+.ni{position:relative}
+.nl{background:none;border:0;font:inherit;font-weight:600;padding:10px 16px;border-radius:999px;cursor:pointer;color:var(--tx);transition:.25s}
+.nl:hover,.nl.on{background:rgba(10,155,74,.12);color:var(--g)}
+.dd{position:absolute;top:100%;left:0;min-width:230px;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh);padding:8px;opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s}
+.ni:hover .dd,.ni:focus-within .dd{opacity:1;visibility:visible;transform:none}
+.dd a{display:block;padding:10px 14px;border-radius:12px;font-weight:600;font-size:.93rem}
+.dd a:hover{background:rgba(255,122,0,.12);color:var(--o);padding-left:20px}
+.dd a{transition:.2s}
+/* bottom nav */
+#bar{display:none}
+#sheet{position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--card);border-radius:26px 26px 0 0;padding:18px 18px calc(100px + env(safe-area-inset-bottom,0px));box-shadow:0 -20px 50px rgba(0,0,0,.25);transform:translateY(110%);transition:.35s cubic-bezier(.2,.9,.3,1)}
+#sheet.open{transform:none}
+#sheet h4{margin-bottom:8px}
+#sheet a{display:block;padding:13px 14px;border-radius:14px;font-weight:600}
+#sheet a:active{background:rgba(10,155,74,.12)}
+#veil{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:60;opacity:0;visibility:hidden;transition:.3s}
+#veil.open{opacity:1;visibility:visible}
+@media (max-width:900px){
+ nav.top{display:none}
+ #bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--card);border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px));justify-content:space-around;box-shadow:0 -8px 24px rgba(0,0,0,.08)}
+ #bar button{background:none;border:0;font:inherit;font-size:.78rem;font-weight:600;color:var(--mut);display:flex;flex-direction:column;align-items:center;gap:4px;padding:2px 10px;cursor:pointer}
+ #bar button b{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#ff7a00,#ff9a3c);display:grid;place-items:center;font-size:21px;transition:.3s;box-shadow:0 6px 14px rgba(255,122,0,.3)}
+ #bar button.on{color:var(--o)}
+ #bar button.on b{transform:translateY(-6px) scale(1.08)}
+ body{padding-bottom:96px}
+}
+/* buttons + bubble */
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font:inherit;font-weight:700;padding:13px 26px;border-radius:999px;color:#fff;background:linear-gradient(135deg,var(--g),#18c46a);box-shadow:0 8px 20px rgba(10,155,74,.35);transition:transform .25s,box-shadow .25s}
+.btn.o{background:linear-gradient(135deg,var(--o),#ff9a3c);box-shadow:0 8px 20px rgba(255,122,0,.35)}
+.btn.w{background:var(--card);color:var(--g2);box-shadow:var(--sh)}
+.btn:hover{transform:translateY(-3px) scale(1.03)}
+.btn:active{transform:scale(.96)}
+.bubble{position:absolute;border-radius:50%;pointer-events:none;background:rgba(255,255,255,.55);transform:scale(0);animation:bub .7s ease-out forwards}
+@keyframes bub{to{transform:scale(4);opacity:0}}
+.rise{position:absolute;bottom:-8px;border-radius:50%;pointer-events:none;border:1.5px solid rgba(255,255,255,.8);background:rgba(255,255,255,.25);animation:rise 1s ease-out forwards}
+@keyframes rise{to{transform:translateY(-46px);opacity:0}}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:70px 0 90px;background:radial-gradient(circle at 80% 10%,rgba(255,122,0,.16),transparent 40%),radial-gradient(circle at 10% 30%,rgba(10,155,74,.2),transparent 45%)}
+.blob{position:absolute;border-radius:50%;filter:blur(8px);opacity:.5;animation:float 9s ease-in-out infinite}
+.blob.a{width:180px;height:180px;background:rgba(24,196,106,.3);top:40px;right:8%}
+.blob.b{width:110px;height:110px;background:rgba(255,122,0,.3);bottom:50px;left:6%;animation-delay:-3s}
+@keyframes float{50%{transform:translateY(-28px) translateX(14px)}}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;position:relative}
+.chip{display:inline-flex;gap:8px;align-items:center;padding:7px 16px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-weight:600;font-size:.88rem;color:var(--g2);box-shadow:var(--sh)}
+.chip:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--g);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{transform:scale(1.8);opacity:.4}}
+h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.12;font-weight:800;margin:18px 0}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--o),#ffb347);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--mut);font-size:1.08rem;max-width:560px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.orb{aspect-ratio:1;max-width:420px;margin:auto;border-radius:44% 56% 52% 48%/50% 44% 56% 50%;background:linear-gradient(135deg,var(--g),#7ddc9b 60%,#ffd27a);display:grid;place-items:center;font-size:7rem;animation:morph 8s ease-in-out infinite;box-shadow:0 30px 60px rgba(10,155,74,.3);position:relative;width:100%}
+.orb span{animation:float 5s ease-in-out infinite}
+.orb u{position:absolute;text-decoration:none;background:var(--card);color:var(--tx);font-size:.85rem;font-weight:700;padding:8px 14px;border-radius:14px;box-shadow:var(--sh);animation:float 6s ease-in-out infinite}
+@keyframes morph{50%{border-radius:56% 44% 40% 60%/42% 58% 42% 58%}}
+@media (max-width:900px){.hg{grid-template-columns:1fr}.orb{max-width:260px;font-size:4.5rem}}
+/* sections */
+section{padding:56px 0}
+.st{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;margin-bottom:8px}
+.ss{color:var(--mut);margin-bottom:28px;max-width:620px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--sh);transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(10,155,74,.18);border-color:var(--g)}
+.ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:26px;background:linear-gradient(135deg,rgba(10,155,74,.16),rgba(255,122,0,.16));margin-bottom:14px}
+.card h3{font-size:1.08rem;margin-bottom:6px}
+.card p{color:var(--mut);font-size:.94rem}
+.tag{display:inline-block;font-size:.76rem;font-weight:700;color:var(--o);background:rgba(255,122,0,.12);padding:3px 12px;border-radius:999px;margin-bottom:8px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:-50px;position:relative}
+.stat{background:var(--card);border-radius:22px;padding:22px;text-align:center;box-shadow:var(--sh);border:1px solid var(--line)}
+.stat b{display:block;font-size:2rem;font-weight:800;color:var(--g)}
+.stat span{color:var(--mut);font-size:.88rem}
+.band{background:linear-gradient(135deg,var(--g2),var(--g));color:#fff;border-radius:32px;padding:44px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;position:relative;overflow:hidden}
+.band h2{max-width:520px}
+.pg{padding:44px 0 24px;background:linear-gradient(135deg,rgba(10,155,74,.14),rgba(255,122,0,.10))}
+.crumb{color:var(--mut);font-size:.88rem;font-weight:600}
+.pg h1{font-size:clamp(1.8rem,4vw,2.6rem);margin:6px 0 0}
+.ul{list-style:none;padding:0;display:grid;gap:12px}
+.ul li{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 18px;display:flex;gap:14px;align-items:center;justify-content:space-between;transition:.25s}
+.ul li:hover{transform:translateX(6px);border-color:var(--g)}
+.nb{counter-increment:n}
+ol.ul{counter-reset:n}
+ol.ul li:before{counter-increment:n;content:counter(n);flex:none;width:34px;height:34px;border-radius:50%;background:var(--g);color:#fff;display:grid;place-items:center;font-weight:800}
+ol.ul li{justify-content:flex-start}
+
+/* ===== Avatar (inisial & foto) ===== */
+.av{position:relative;width:96px;height:96px;border-radius:50%;margin:0 auto 14px;background:linear-gradient(135deg,var(--g),#ffb347);display:grid;place-items:center;font-size:2.2rem;color:#fff;font-weight:800;border:4px solid var(--card);box-shadow:0 0 0 3px var(--g)}
+/* versi foto: cincin gradasi hijau-oranye + glow lembut */
+.av.has-img{
+  width:132px;height:132px;padding:0;overflow:visible;
+  background:conic-gradient(from 210deg,var(--g),#18c46a,#ffb347,var(--o),var(--g));
+  border:0;
+  box-shadow:0 14px 32px rgba(10,155,74,.28),0 4px 10px rgba(255,122,0,.18);
+  transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s;
+}
+.av.has-img:before{ /* jarak putih antara cincin dan foto */
+  content:"";position:absolute;inset:4px;border-radius:50%;background:var(--card);z-index:0
+}
+.av.has-img:after{ /* highlight kaca tipis di atas foto */
+  content:"";position:absolute;inset:8px;border-radius:50%;z-index:2;pointer-events:none;
+  background:linear-gradient(160deg,rgba(255,255,255,.22),transparent 38%);
+}
+.av.has-img img{
+  position:absolute;inset:8px;z-index:1;
+  width:calc(100% - 16px);height:calc(100% - 16px);
+  max-width:none;border-radius:50%;object-fit:cover;object-position:center 18%;display:block;
+  filter:saturate(1.08) contrast(1.04) brightness(1.03);
+  transition:transform .6s cubic-bezier(.2,.8,.2,1);
+}
+.card:hover .av.has-img{transform:translateY(-3px);box-shadow:0 20px 40px rgba(10,155,74,.36),0 6px 14px rgba(255,122,0,.24)}
+.card:hover .av.has-img img{transform:scale(1.06)}
+.av.has-img.lg{width:168px;height:168px}
+.av.has-img.lg+h3{font-size:1.25rem}
+/* kartu pimpinan */
+.card.lead-card{background:linear-gradient(180deg,rgba(10,155,74,.08),transparent 55%),var(--card);padding-top:32px}
+.card.lead-card p{font-weight:600;color:var(--g2)}
+:root[data-theme="dark"] .card.lead-card p{color:var(--g)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .card.lead-card p{color:var(--g)}}
+
+.tc{text-align:center}
+.node{padding:12px 18px;border-radius:16px;background:var(--card);border:2px solid var(--g);font-weight:700;font-size:.9rem;text-align:center;box-shadow:var(--sh)}
+.node.k{background:linear-gradient(135deg,var(--g),#18c46a);color:#fff}
+.node.s{border-color:var(--o);font-weight:600;font-size:.82rem}
+
+/* ===== Bagan Struktur Organisasi ===== */
+.oc{display:flex;flex-direction:column;align-items:center;width:100%}
+.oc-hint{text-align:center;margin:0 auto 24px;max-width:none;display:flex;justify-content:center}
+.oc-hint span{display:inline-flex;gap:8px;align-items:center;padding:8px 18px;border-radius:999px;background:rgba(255,122,0,.12);color:var(--o);font-weight:700;font-size:.88rem}
+.oc-root{min-width:220px;font-size:1.05rem;padding:14px 32px}
+.oc-v{width:2px;height:28px;background:var(--g)}
+.oc-cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;width:100%;align-items:start}
+.oc-col{position:relative;padding-top:28px}
+/* garis horizontal penghubung antar kelompok */
+.oc-col:before{content:"";position:absolute;top:0;left:-10px;right:-10px;height:2px;background:var(--g)}
+.oc-col:first-child:before{left:50%}
+.oc-col:last-child:before{right:50%}
+/* garis vertikal turun ke kotak ketua kelompok */
+.oc-col:after{content:"";position:absolute;top:0;left:50%;width:2px;height:28px;margin-left:-1px;background:var(--g)}
+.oc-head{display:flex;align-items:center;justify-content:center;min-height:92px;font-size:.88rem;line-height:1.35}
+.oc-subs{list-style:none;padding:0;margin:0 0 0 26px}
+.oc-subs li{position:relative;padding:7px 0 7px 22px}
+/* garis siku ke setiap subkelompok */
+.oc-subs li:before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--g)}
+.oc-subs li:last-child:before{bottom:50%}
+.oc-subs li:after{content:"";position:absolute;left:0;top:50%;width:20px;height:2px;background:var(--g)}
+.oc-subs .node{display:flex;align-items:center;justify-content:center;min-height:64px;line-height:1.35}
+/* kotak bagan = tombol interaktif */
+button.node{font-family:inherit;color:var(--tx);cursor:pointer;width:100%;transition:transform .25s,box-shadow .25s,border-color .25s,background .25s}
+button.node.k{color:#fff}
+button.node.oc-root{width:auto}
+button.node:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(10,155,74,.28);border-color:var(--o)}
+button.node.k:hover{border-color:#fff}
+button.node.s:hover{border-color:var(--g);background:rgba(10,155,74,.08)}
+button.node:active{transform:scale(.97)}
+button.node:focus-visible{outline:3px solid var(--o);outline-offset:3px}
+@media (max-width:1000px){
+ .oc-cols{grid-template-columns:1fr;gap:34px;max-width:480px}
+ .oc-col{padding-top:0}
+ .oc-col:before{display:none}
+ .oc-col:after{display:none}
+ .oc-head{min-height:0}
+}
+
+/* ===== Pop-up Tugas & Fungsi ===== */
+#modal{position:fixed;inset:0;z-index:120;display:grid;place-items:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+#modal.open{opacity:1;visibility:visible}
+.mbk{position:absolute;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(4px)}
+.mdl{position:relative;width:100%;max-width:780px;max-height:min(88vh,100%);display:flex;flex-direction:column;background:var(--card);color:var(--tx);border:1px solid var(--line);border-radius:28px;box-shadow:0 30px 80px rgba(0,0,0,.35);overflow:hidden;transform:translateY(28px) scale(.97);transition:transform .35s cubic-bezier(.2,.9,.3,1)}
+#modal.open .mdl{transform:none}
+.mh{position:relative;flex:none;padding:24px 28px 18px;background:linear-gradient(135deg,rgba(10,155,74,.16),rgba(255,122,0,.12));border-bottom:1px solid var(--line)}
+.mh .tag{margin-bottom:0}
+.mh h2{font-size:clamp(1.2rem,3vw,1.6rem);line-height:1.25;font-weight:800;margin:8px 0 8px;padding-right:46px}
+.mm{display:grid;gap:3px;color:var(--mut);font-size:.88rem}
+.mm b{color:var(--tx);font-weight:700}
+.mx{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;border:0;background:var(--card);color:var(--tx);font:inherit;font-size:1.15rem;font-weight:800;cursor:pointer;box-shadow:var(--sh);transition:.25s}
+.mx:hover{background:var(--o);color:#fff;transform:rotate(90deg)}
+.mtabs{flex:none;display:flex;gap:8px;padding:14px 28px 0;flex-wrap:wrap}
+.mtabs button{font:inherit;font-weight:700;font-size:.9rem;padding:9px 20px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--mut);cursor:pointer;transition:.25s}
+.mtabs button:hover{color:var(--g);border-color:var(--g)}
+.mtabs button.on{background:linear-gradient(135deg,var(--g),#18c46a);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(10,155,74,.3)}
+.mb{padding:18px 28px 28px;overflow-y:auto;overscroll-behavior:contain}
+.mb>p{color:var(--tx);margin-bottom:14px}
+.ml{list-style:none;padding:0;display:grid;gap:10px;counter-reset:m}
+.ml li{counter-increment:m;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border-radius:16px;background:var(--bg);border:1px solid var(--line);font-size:.93rem;line-height:1.55}
+.ml li:before{content:counter(m);flex:none;width:28px;height:28px;border-radius:50%;background:var(--g);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.8rem;margin-top:1px}
+.mk{margin-top:22px;padding-top:18px;border-top:1px dashed var(--line)}
+.mk h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);margin-bottom:10px}
+.mk div{display:flex;flex-wrap:wrap;gap:8px}
+.mk button{font:inherit;font-weight:600;font-size:.84rem;padding:7px 14px;border-radius:999px;border:0;background:rgba(10,155,74,.12);color:var(--g);cursor:pointer;text-align:left;transition:.25s}
+.mk button:hover{background:var(--g);color:#fff;transform:translateY(-2px)}
+@media (max-width:640px){
+ #modal{padding:0;place-items:end stretch}
+ .mdl{max-width:none;max-height:90vh;border-radius:26px 26px 0 0;transform:translateY(100%)}
+ .mh{padding:20px 20px 14px}
+ .mtabs{padding:12px 20px 0}
+ .mb{padding:16px 20px calc(24px + env(safe-area-inset-bottom,0px))}
+}
+
+.date{flex:none;width:62px;text-align:center;border-radius:16px;background:linear-gradient(135deg,var(--o),#ff9a3c);color:#fff;padding:8px 0;font-weight:800;line-height:1.1}
+.date small{display:block;font-weight:600;font-size:.7rem}
+form{display:grid;gap:14px}
+input,textarea,select{font:inherit;padding:13px 16px;border-radius:16px;border:1px solid var(--line);background:var(--card);color:var(--tx);width:100%}
+input:focus,textarea:focus{outline:2px solid var(--g)}
+.map{border-radius:24px;min-height:300px;background:linear-gradient(135deg,#cfeedd,#e8f7ee);position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;padding:24px;border:1px solid var(--line)}
+.map:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 39px,rgba(10,155,74,.12) 39px 40px),repeating-linear-gradient(90deg,transparent 0 39px,rgba(10,155,74,.12) 39px 40px)}
+.pin{font-size:3rem;animation:bounce 1.4s infinite;position:relative}
+@keyframes bounce{50%{transform:translateY(-14px)}}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:900px){.two{grid-template-columns:1fr}}
+.soc{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.soc a{padding:8px 16px;border-radius:999px;background:rgba(10,155,74,.12);font-weight:700;font-size:.88rem;transition:.25s}
+.soc a:hover{background:var(--g);color:#fff;transform:translateY(-3px)}
+footer{padding:36px 0 24px;border-top:1px solid var(--line);color:var(--mut);font-size:.9rem;text-align:center}
+.rv{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+#toast{position:fixed;left:50%;top:90px;transform:translate(-50%,-30px);background:var(--g2);color:#fff;padding:12px 22px;border-radius:999px;font-weight:600;opacity:0;transition:.4s;z-index:99}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+/* ===== Tentang Kami ===== */
+.ab{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+.ph{position:relative}
+.ph:before{content:"";position:absolute;inset:18px -18px -18px 18px;border-radius:34px;background:linear-gradient(135deg,#0b2a6b,#38bdf8);z-index:0;transition:.4s;box-shadow:0 18px 40px rgba(11,42,107,.28)}
+.ph:hover:before{inset:10px -10px -10px 10px}
+.ph .fr{position:relative;z-index:1;border-radius:32px;overflow:hidden;aspect-ratio:4/3;border:6px solid var(--card);box-shadow:var(--sh)}
+.ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.ph:hover img{transform:scale(1.07)}
+.fb{position:absolute;z-index:2;left:-16px;bottom:30px;background:var(--card);padding:8px 12px;border-radius:18px;box-shadow:var(--sh);font-weight:800;font-size:.92rem;display:flex;gap:12px;align-items:center;animation:float 6s ease-in-out infinite}
+.fb small{display:block;font-weight:600;color:var(--mut);font-size:.76rem}
+.fb i{font-style:normal;font-size:1.7rem}
+.ab p{color:var(--mut);margin-bottom:14px}
+.ab .st{line-height:1.2;margin:10px 0 16px}
+.ab .st b{color:var(--o)}
+.sc h3{display:flex;align-items:center;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chips span{padding:5px 13px;border-radius:999px;background:rgba(10,155,74,.12);color:var(--g);font-weight:600;font-size:.8rem;transition:.25s;cursor:default}
+.chips span:hover{background:var(--g);color:#fff;transform:translateY(-3px)}
+@media (max-width:900px){
+ .ab{grid-template-columns:1fr;gap:40px}
+ .ph:before{inset:12px -8px -12px 8px}
+ .fb{left:10px;bottom:18px}
+}
+
+</style>
+</head>
+<body>
+    <!--
+<header><div class="wrap hd">
+ <a href="#/" class="logo"><i>🌿</i><span>Biro Pembangunan &amp; Lingkungan Hidup<small>Provinsi DKI Jakarta</small></span></a>
+ <nav class="top" id="top"></nav>
+</div></header>
+-->
+<header><div class="wrap hd">
+<a href="#/" class="logo">
+    <img src="logo_bplh.jpg" alt="Logo BPLH">
+    <span>Biro Pembangunan &amp; Lingkungan Hidup<small>Setda Provinsi DKI Jakarta</small></span>
+</a>
+<nav class="top" id="top"></nav>
+</div></header>
+<main id="main"></main>
+<footer><div class="wrap">© 2026 Biro Pembangunan dan Lingkungan Hidup · Sekretariat Daerah Provinsi DKI Jakarta</div></footer>
+<div id="veil"></div><div id="sheet"></div><div id="bar"></div><div id="toast"></div>
+<div id="modal" aria-hidden="true"><div class="mbk" data-close></div><div class="mdl" role="dialog" aria-modal="true" aria-labelledby="mt"></div></div>
+<script>
+const M=[
+{t:'Beranda',i:'🏠',h:'/'},
+{t:'Profil',i:'🏢',
+    s:[['tentang','Tentang Kami'],['jabatan','Profil Jabatan'],['struktur','Struktur Organisasi'],['visi','Visi & Misi'],['tugas','Tugas & Fungsi'],['regulasi','Kebijakan & Regulasi'],['kontak','Kontak Kami']]},
+{t:'Informasi',i:'📰',
+    s:[['berita','Berita'],['pengaduan','Pengaduan'],['laporan','Laporan'],['pengumuman','Pengumuman'],['agenda','Kalender Agenda'],['ppid','PPID']]},
+{t:'Layanan',i:'🎧',
+    s:[['layanan','Layanan Internal'],['layanan','Layanan Eksternal']]}
+];
+const $=s=>document.querySelector(s);
+const sub=m=>m.s.map(x=>`<a href="#/${x[0]}${x[1].includes('Eksternal')?'/ext':''}">${x[1]}</a>`).join('');
+$('#top').innerHTML=M.map((m,k)=>m.s?`<div class="ni"><button class="nl" data-k="${k}">${m.t} ▾</button><div class="dd">${sub(m)}</div></div>`:`<a class="nl" data-k="${k}" href="#${m.h}">${m.t}</a>`).join('');
+$('#bar').innerHTML=M.map((m,k)=>`<button data-k="${k}"><b>${m.i}</b>${m.t}</button>`).join('');
+function closeS(){$('#sheet').classList.remove('open');$('#veil').classList.remove('open')}
+$('#veil').onclick=closeS;$('#sheet').onclick=e=>{if(e.target.closest('a'))closeS()};
+$('#bar').onclick=e=>{const b=e.target.closest('button');if(!b)return;const m=M[b.dataset.k];if(!m.s){closeS();location.hash=m.h;return}
+ $('#sheet').innerHTML=`<h4>${m.t}</h4>`+sub(m);$('#sheet').classList.add('open');$('#veil').classList.add('open')};
+// bubble effect
+function bubbles(el,x,y){const r=el.getBoundingClientRect(),d=Math.max(r.width,r.height)/3,b=document.createElement('span');b.className='bubble';b.style.cssText=`width:${d}px;height:${d}px;left:${x-r.left-d/2}px;top:${y-r.top-d/2}px`;el.appendChild(b);setTimeout(()=>b.remove(),700)}
+document.addEventListener('pointerdown',e=>{const b=e.target.closest('.btn');if(b)bubbles(b,e.clientX,e.clientY)});
+document.addEventListener('pointerover',e=>{const b=e.target.closest('.btn');if(!b||b.contains(e.relatedTarget))return;for(let i=0;i<5;i++){const s=document.createElement('span'),d=6+Math.random()*10;s.className='rise';s.style.cssText=`width:${d}px;height:${d}px;left:${10+Math.random()*80}%;animation-delay:${i*.08}s`;b.appendChild(s);setTimeout(()=>s.remove(),1200)}});
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2600)}
+// jika foto gagal dimuat, kembali ke avatar inisial
+function imgFail(img){const av=img.parentElement;av.classList.remove('has-img','lg');av.textContent=img.alt?img.alt[0]:'?'}
+// helpers
+const hd=(c,t)=>`<div class="pg"><div class="wrap"><div class="crumb">${c}</div><h1>${t}</h1></div></div>`;
+const W=h=>`<section><div class="wrap">${h}</div></section>`;
+const cards=a=>`<div class="grid">${a.map(c=>`<div class="card rv"><div class="ic">${c[0]}</div><h3>${c[1]}</h3><p>${c[2]}</p></div>`).join('')}</div>`;
+const ol=a=>`<ol class="ul">${a.map(x=>`<li class="rv">${x}</li>`).join('')}</ol>`;
+const news=[['Kolaborasi','Rapat Koordinasi Program Pengelolaan Lingkungan Hidup 2026','12 Okt 2026'],['Pembangunan','Monitoring Capaian Pembangunan Triwulan III','08 Okt 2026'],['Lingkungan','Kampanye Jakarta Bersih dan Hijau Bersama Perangkat Daerah','01 Okt 2026']];
+
+/* ================= DATA TUGAS & FUNGSI (STRUKTUR ORGANISASI) ================= */
+const KB='Kepala Biro Pembangunan dan Lingkungan Hidup';
+const BIRO='Biro Pembangunan dan Lingkungan Hidup';
+const JF_MADYA='Analis Kebijakan Ahli Madya';
+const JF_MUDA='Analis Kebijakan Ahli Muda';
+const ORG={};
+
+// Kelompok: tS = lingkup tugas, fS = lingkup fungsi
+function addKel(id,nama,tS,fS,children){
+ ORG[id]={lv:'Kelompok',t:'Kelompok '+nama,nama,pimp:'Ketua Kelompok '+nama,atasan:KB,jf:JF_MADYA,parent:null,children,
+  tabs:[
+   {l:'Tugas',p:`Kelompok ${nama} mempunyai tugas melaksanakan pengoordinasian dan perumusan kebijakan, pemantauan dan evaluasi pelaksanaan kebijakan, dan pengoordinasian pelaksanaan tugas PD penyelenggaraan urusan pemerintahan bidang ${tS}.`},
+   {l:'Fungsi',p:`Kelompok ${nama} menyelenggarakan fungsi:`,items:[
+     `pengoordinasian, perumusan dan penyusunan kebijakan penyelenggaraan urusan pemerintahan bidang ${fS}`,
+     `pemantauan dan evaluasi pelaksanaan kebijakan penyelenggaraan urusan pemerintahan bidang ${fS}`,
+     `pengoordinasian pelaksanaan tugas PD dalam penyelenggaraan urusan pemerintahan bidang ${fS}`,
+     `pelaksanaan pengelolaan data dan informasi kebijakan penyelenggaraan urusan pemerintahan bidang ${fS}`]}
+  ]};
+}
+// Subkelompok: S = lingkup; d = true jika redaksinya "dalam ..."
+function addSub(id,nama,parent,S,d){
+ const dl=d?'dalam ':'';
+ ORG[id]={lv:'Subkelompok',t:'Subkelompok '+nama,nama,pimp:'Ketua Subkelompok '+nama,atasan:'Ketua '+ORG[parent].t,jf:JF_MUDA,parent,
+  tabs:[{l:'Tugas',p:`Subkelompok ${nama} mempunyai tugas:`,items:[
+   `mengoordinasikan, merumuskan dan menyusun kebijakan ${dl}${S}`,
+   `memantau dan mengevaluasi pelaksanaan kebijakan ${dl}${S}`,
+   `mengoordinasikan pelaksanaan tugas PD dalam ${S}`,
+   d?`mengelola data dan informasi dalam ${S}`:`mengelola data dan informasi kebijakan ${S}`]}]};
+}
+
+addKel('pupr','Pekerjaan Umum dan Perumahan Rakyat',
+ 'pekerjaan umum dan penataan ruang (pada sub urusan bidang jalan, sumber daya air, air minum, air limbah, drainase, permukiman), perumahan rakyat dan kawasan permukiman, energi dan sumber daya mineral (pada sub urusan bidang geologi), dan penyelenggaraan penerangan jalan umum, jaringan utilitas dan infrastruktur transportasi',
+ 'pekerjaan umum dan penataan ruang (pada sub urusan bidang jalan, sumber daya air, air minum, air limbah, drainase, permukiman), perumahan rakyat dan kawasan permukiman, energi dan sumber daya mineral (pada sub urusan bidang geologi), dan penyelenggaraan penerangan jalan umum, jaringan utilitas dan infrastruktur transportasi',
+ ['bm','sda','prkp']);
+addKel('prcp','Penataan Ruang, Cipta Karya dan Pertanahan',
+ 'pekerjaan umum dan penataan ruang (pada sub urusan bidang penataan ruang, bangunan gedung, penataan bangunan dan lingkungannya, dan permukiman), perumahan rakyat dan kawasan permukiman, pertanahan, dan penyelenggaraan penataan kawasan',
+ 'pekerjaan umum dan penataan ruang (pada sub urusan bidang penataan ruang, bangunan gedung, penataan bangunan dan lingkungannya, permukiman, dan jasa konstruksi), perumahan rakyat dan kawasan permukiman, dan pertanahan',
+ ['bg','prp','pr']);
+addKel('lhrth','Lingkungan Hidup dan Ruang Terbuka Hijau',
+ 'pekerjaan umum dan penataan ruang (pada sub urusan bidang persampahan dan air limbah), lingkungan hidup, kehutanan dan penyelenggaraan pertamanan dan pemakaman, dan bidang mitigasi adaptasi bencana iklim',
+ 'pekerjaan umum dan penataan ruang (pada sub urusan bidang persampahan dan air limbah), lingkungan hidup, kehutanan dan penyelenggaraan pertamanan dan pemakaman, dan bidang mitigasi adaptasi bencana iklim',
+ ['kb','lh','rth']);
+
+// Kelompok Pembangunan Kota (redaksi berbeda, ditulis manual)
+(()=>{
+ const X='pemantauan program pembangunan, pemantauan fasilitas sosial dan fasilitas umum, dan penyelesaian pemenuhan kewajiban Izin Pemanfaatan Ruang';
+ ORG.pk={lv:'Kelompok',t:'Kelompok Pembangunan Kota',nama:'Pembangunan Kota',pimp:'Ketua Kelompok Pembangunan Kota',atasan:KB,jf:JF_MADYA,parent:null,children:['tu','ppp','ppk'],
+  tabs:[
+   {l:'Tugas',p:`Kelompok Pembangunan Kota mempunyai tugas melaksanakan pengoordinasian dan perumusan kebijakan, pemantauan dan evaluasi pelaksanaan kebijakan, dan pengoordinasian pelaksanaan tugas PD dalam pemantauan program pembangunan, pemantauan fasilitas sosial dan fasilitas umum, penyelesaian pemenuhan kewajiban Izin Pemanfaatan Ruang, serta pengelolaan kesekretariatan ${BIRO}.`},
+   {l:'Fungsi',p:'Dalam melaksanakan tugas, Kelompok Pembangunan Kota menyelenggarakan fungsi:',items:[
+    `pengoordinasian, perumusan dan penyusunan kebijakan dalam ${X}`,
+    `pemantauan dan evaluasi pelaksanaan kebijakan dalam ${X}`,
+    `pengoordinasian pelaksanaan tugas PD dalam ${X}`,
+    `pelaksanaan pengelolaan data dan informasi kebijakan dalam ${X}`,
+    `pengelolaan kesekretariatan ${BIRO}`]}
+  ]};
+})();
+
+// Subkelompok
+addSub('bm','Bina Marga dan Infrastruktur Transportasi','pupr','penyelenggaraan urusan pemerintahan bidang pekerjaan umum dan penataan ruang (pada sub urusan bidang jalan), penyelenggaraan penerangan jalan umum, jaringan utilitas dan infrastruktur transportasi (prasarana dan sarana transportasi darat dan transportasi laut)');
+addSub('sda','Sumber Daya Air','pupr','penyelenggaraan urusan pemerintahan bidang pekerjaan umum dan penataan ruang (pada sub urusan bidang sumber daya air, air minum, drainase), dan energi dan sumber daya mineral (pada sub urusan bidang geologi)');
+addSub('prkp','Perumahan Rakyat dan Kawasan Permukiman','pupr','penyelenggaraan urusan pemerintahan bidang perumahan rakyat dan kawasan permukiman, dan pekerjaan umum dan penataan ruang (pada sub urusan bidang permukiman)');
+addSub('bg','Bangunan Gedung','prcp','penyelenggaraan urusan pekerjaan umum dan penataan ruang (pada sub urusan bidang bangunan gedung, penataan bangunan dan lingkungannya, dan jasa konstruksi)');
+addSub('prp','Pengendalian Ruang dan Pertanahan','prcp','penyelenggaraan urusan pemerintahan bidang pertanahan dan pengendalian pemanfaatan ruang');
+addSub('pr','Pemanfaatan Ruang','prcp','penyelenggaraan bidang perencanaan tata ruang dan pemanfaatan ruang');
+addSub('kb','Kebersihan','lhrth','penyelenggaraan urusan pemerintahan bidang pekerjaan umum dan penataan ruang (pada sub urusan bidang persampahan) dan lingkungan hidup (pada sub urusan bidang persampahan)');
+addSub('lh','Lingkungan Hidup','lhrth','penyelenggaraan urusan pemerintahan bidang lingkungan hidup, dan pekerjaan umum dan penataan ruang (pada sub urusan bidang air limbah)');
+addSub('rth','Ruang Terbuka Hijau','lhrth','penyelenggaraan urusan pemerintahan bidang kehutanan dan penyelenggaraan pertamanan dan pemakaman, pengendalian pencemaran udara, dan mitigasi adaptasi bencana iklim');
+addSub('ppp','Pemantauan Program Pembangunan','pk','pemantauan program pembangunan',true);
+addSub('ppk','Pengendalian Penyelesaian Kewajiban','pk','pemantauan fasilitas sosial dan fasilitas umum, dan penyelesaian pemenuhan kewajiban Izin Pemanfaatan Ruang',true);
+
+// Subbagian Tata Usaha
+ORG.tu={lv:'Subbagian',t:'Subbagian Tata Usaha',nama:'Tata Usaha',pimp:'Kepala Subbagian Tata Usaha',atasan:'Ketua Kelompok Pembangunan Kota',jf:null,parent:'pk',
+ tabs:[{l:'Tugas',p:'Subbagian Tata Usaha mempunyai tugas:',items:[
+  `melaksanakan pengelolaan barang milik daerah ${BIRO}`,
+  `melaksanakan pengelolaan kerumahtanggaan, ketatalaksanaan, ketatausahaan, kearsipan dan kehumasan ${BIRO}`,
+  `melaksanakan pengelolaan dan pengoordinasian data dan sistem informasi ${BIRO}`,
+  `melaksanakan pengelolaan kepegawaian ${BIRO}`,
+  `melaksanakan penyusunan bahan analisa jabatan dan analisa beban kerja ${BIRO}`,
+  `melaksanakan penyusunan rincian tugas dan fungsi ${BIRO}`,
+  `melaksanakan pengoordinasian penyusunan Rencana Strategis, Rencana Kerja, dan Rencana Kerja Anggaran ${BIRO}`,
+  `melaksanakan pengoordinasian pelaksanaan Rencana Strategis dan Dokumen Pelaksanaan Anggaran ${BIRO}`,
+  `melaksanakan pemantauan dan evaluasi pelaksanaan Rencana Strategis dan Dokumen Pelaksanaan Anggaran ${BIRO}`,
+  `melaksanakan pengoordinasian penyusunan proses bisnis, standar, dan prosedur ${BIRO}`,
+  `melaksanakan pengoordinasian dan penyusunan pelaporan kinerja, kegiatan, dan akuntabilitas ${BIRO}`,
+  `melaksanakan penatausahaan keuangan ${BIRO}`,
+  `melaksanakan pengoordinasian dan penyusunan laporan keuangan ${BIRO}`,
+  `melaksanakan pengoordinasian penyelesaian tindak lanjut hasil pemeriksaan dan pengawasan Badan Pemeriksa Keuangan dan Aparat Pengawasan Internal Pemerintah pada ${BIRO}`,
+  `mengoordinasikan pelaksanaan reformasi birokrasi lingkup ${BIRO}`]}]};
+
+/* ================= POP-UP ================= */
+let curOrg=null,curTab=0,lastFocus=null;
+function renderM(){
+ const d=ORG[curOrg],tab=d.tabs[curTab];
+ const meta=[`Dipimpin oleh <b>${d.pimp}</b>`];
+ /*
+ if(d.atasan)meta.push(`Berkedudukan di bawah dan bertanggung jawab kepada <b>${d.atasan}</b>`);
+ if(d.jf)meta.push(`Kelompok Jabatan Fungsional: <b>${d.jf}</b>`);
+ */
+ const chips=(t,a)=>a&&a.length?`<div class="mk"><h4>${t}</h4><div>${a.map(i=>`<button type="button" data-org="${i}">${ORG[i].t}</button>`).join('')}</div></div>`:'';
+ const nav=chips(d.lv==='Kelompok'?'Subkelompok / unit di bawahnya':'Unit di bawahnya',d.children)+(d.parent?chips('Atasan langsung',[d.parent]):'');
+ $('#modal .mdl').innerHTML=
+ `<div class="mh"><button class="mx" type="button" data-close aria-label="Tutup">✕</button>
+   <span class="tag">${d.lv}</span><h2 id="mt">${d.t}</h2><div class="mm">${meta.map(m=>`<span>${m}</span>`).join('')}</div></div>`
+ +(d.tabs.length>1?`<div class="mtabs" role="tablist">${d.tabs.map((x,i)=>`<button type="button" role="tab" aria-selected="${i===curTab}" class="${i===curTab?'on':''}" data-tab="${i}">${x.l}</button>`).join('')}</div>`:'')
+ +`<div class="mb">${tab.p?`<p>${tab.p}</p>`:''}${tab.items?`<ol class="ml">${tab.items.map(x=>`<li>${x}</li>`).join('')}</ol>`:''}${nav}</div>`;
+}
+function openOrg(id){
+ if(!ORG[id])return;
+ const m=$('#modal');
+ if(!m.classList.contains('open'))lastFocus=document.activeElement;
+ curOrg=id;curTab=0;renderM();
+ m.classList.add('open');m.setAttribute('aria-hidden','false');document.body.classList.add('lock');
+ const mb=$('#modal .mb');if(mb)mb.scrollTop=0;
+ const x=$('#modal .mx');if(x)x.focus({preventScroll:true});
+}
+function closeM(){
+ const m=$('#modal');if(!m.classList.contains('open'))return;
+ m.classList.remove('open');m.setAttribute('aria-hidden','true');document.body.classList.remove('lock');
+ if(lastFocus&&lastFocus.focus)lastFocus.focus({preventScroll:true});
+}
+document.addEventListener('click',e=>{
+ const o=e.target.closest('[data-org]');if(o){openOrg(o.dataset.org);return}
+ const t=e.target.closest('[data-tab]');if(t&&curOrg){curTab=+t.dataset.tab;renderM();const x=$('#modal .mtabs .on');if(x)x.focus({preventScroll:true});return}
+ if(e.target.closest('[data-close]'))closeM();
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeM()});
+
+const P={
+home:()=>`  <div class="hero">
+                <div class="blob a"></div>
+                <div class="blob b"></div>
+                <div class="wrap hg">
+                    <div>
+                        <span class="chip">Selamat datang di website resmi</span>
+                        <h1>Membangun <em>Jakarta</em> yang hijau, tertata, dan berkelanjutan</h1>
+                        <p class="lead">Biro Pembangunan dan Lingkungan Hidup mengoordinasikan, merumuskan dan menyusun kebijakan, pemantauan dan evaluasi pelaksanaan kebijakan dan pengoordinasian pelaksanaan tugas Perangkat Daerah di Provinsi DKI Jakarta.</p>
+                        <div class="cta">
+                            <a class="btn" href="#/tentang">Kenali Kami →</a>
+                            <a class="btn o" href="#/layanan">Lihat Layanan</a>
+                        </div>
+                    </div>
+                    <div class="orb">
+                        <span>🌳🏢</span>
+                        <u style="top:8%;left:-4%">♻️ Lingkungan</u>
+                        <u style="bottom:10%;right:-2%;animation-delay:-2s">🏗️ Pembangunan</u>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="wrap">
+                <div class="stats">${[['25','Program Strategis'],
+                ['40','Perangkat Daerah Mitra'],
+                ['120','Dokumen Layanan'],
+                ['98','% Capaian Kinerja']]
+                .map(s=>`   <div class="stat rv">
+                                <b data-n="${s[0]}">0</b>
+                                <span>${s[1]}</span>
+                            </div>`).join('')}
+                </div>
+            </div>
+            -->
+${W(`<h2 class="st">Fokus Kerja Kami</h2>
+        <p class="ss">Empat pilar utama yang kami jalankan.</p>`
+        +cards([['🌱','Lingkungan Hidup','Koordinasi kebijakan dan pengendalian kualitas lingkungan.'],
+        ['🏗️','Pembangunan','Sinkronisasi dan pemantauan program pembangunan daerah.'],
+        ['📊','Monitoring & Evaluasi','Pengukuran capaian kinerja secara terukur dan transparan.'],
+        ['🤝','Kolaborasi','Kemitraan lintas perangkat daerah dan pemangku kepentingan.']]))}
+${W(`<h2 class="st">Layanan Cepat</h2>
+        <p class="ss">Akses sistem internal dan eksternal dengan satu klik.</p>
+        <div class="cta" style="margin:0">
+            <a class="btn" href="#/layanan">SIMPELMON</a>
+            <a class="btn o" href="#/layanan">Absen Rabu Transum</a>
+            <a class="btn w" href="#/layanan">JIKA</a>
+            <a class="btn w" href="#/layanan">e-Monev</a>
+        </div>`)}
+${W(`<h2 class="st">Berita Terbaru</h2>
+<p class="ss">Kegiatan dan informasi terkini (contoh konten).</p>
+<div class="grid">
+    ${news.map(n=>`<div class="card rv">
+                    <span class="tag">${n[0]}</span>
+                    <h3>${n[1]}</h3>
+                    <p>${n[2]}</p>
+                    </div>`).join('')}
+                    </div>`)}
+${W(`<div class="band rv">
+    <h2>Punya pengaduan atau masukan? <br> Kami siap mendengar.</h2>
+    <a class="btn w" href="#/pengaduan">Sampaikan Pengaduan</a>
+    </div>`)}`,
+    tentang:()=>hd('Profil','Tentang Kami')
++W(`<div class="ab">
+  <div class="ph rv">
+    <div class="fr"><img src="biro.jpeg" alt="Keluarga Besar Biro Pembangunan dan Lingkungan Hidup" loading="lazy"></div>
+    <div class="fb"><i>🌳</i><div>Keluarga Besar Biro PLH<small>Setda Provinsi DKI Jakarta</small></div></div>
+  </div>
+  <div class="rv">
+    <span class="tag">Mengenal Kami</span>
+    <h2 class="st">Bersama membangun Jakarta yang hijau dan berkelanjutan</h2>
+    <p>Biro Pembangunan dan Lingkungan Hidup mempunyai tugas mengoordinasikan, merumuskan dan menyusun kebijakan, pemantauan dan evaluasi pelaksanaan kebijakan, serta pengoordinasian pelaksanaan tugas Perangkat Daerah penyelenggara urusan pemerintahan di bidang pembangunan dan lingkungan hidup.</p>
+    <p>Dengan semangat kolaborasi dan inovasi digital, biro ini berupaya memastikan program pembangunan berjalan selaras dengan prinsip keberlanjutan demi Jakarta yang hijau, nyaman, dan berdaya saing.</p>
+    <div class="cta">
+      <a class="btn" href="#/visi">Visi &amp; Misi</a>
+      <a class="btn o" href="#/tugas">Tugas &amp; Fungsi</a>
+    </div>
+  </div>
+</div>`)
++W(`<h2 class="st">Lingkup Urusan Kami</h2>
+<p class="ss">Bidang pemerintahan yang kami koordinasikan, pantau, dan evaluasi.</p>
+<div class="grid">${[
+ ['🏗️','Pekerjaan Umum & Penataan Ruang',['Jalan','Sumber Daya Air','Air Minum','Air Limbah','Drainase','Bangunan Gedung','Penataan Bangunan & Lingkungannya','Penataan Ruang','Jasa Konstruksi','Permukiman','Persampahan']],
+ ['🏘️','Perumahan Rakyat & Kawasan Permukiman',['Perumahan Rakyat','Kawasan Permukiman']],
+ ['🌱','Lingkungan Hidup',['Lingkungan Hidup','Kehutanan','Pertanahan']],
+ ['💡','Penerangan Jalan, Utilitas & Transportasi',['Penerangan Jalan Umum','Jaringan Utilitas','Infrastruktur Transportasi']]
+].map(c=>`<div class="card sc rv"><div class="ic">${c[0]}</div><h3>${c[1]}</h3><div class="chips">${c[2].map(x=>`<span>${x}</span>`).join('')}</div></div>`).join('')}</div>`)
++W(`<div class="band rv"><h2>Hijau, nyaman, dan berdaya saing. Mari berkolaborasi bersama kami.</h2><a class="btn w" href="#/kontak">Hubungi Kami</a></div>`),
+
+jabatan:()=>{
+const p=(n,j,f,lead)=>`<div class="card tc rv${lead?' lead-card':''}">
+    <div class="av${f?' has-img':''}${f&&lead?' lg':''}">${f?`<img src="${f}" alt="${n}" loading="lazy" onerror="imgFail(this)">`:n[0]}</div>
+    <h3>${n}</h3>
+    <p>${j}</p>
+</div>`;
+
+const kepala={n:'Iwan Kurniawan',j:'Kepala Biro Pembangunan dan Lingkungan Hidup',f:'img/Iwan_Kurniawan.png'};
+
+const kelompok=[
+ {
+  nama:'Kelompok Pekerjaan Umum dan Perumahan Rakyat',
+  ketua:{n:'Rachmat Mulyadi',j:'Ketua Kelompok Pekerjaan Umum dan Perumahan Rakyat',f:'img/Rachmat_Mulyadi.png'},
+  sub:[
+   {n:'Fitria',j:'Ketua Subkelompok Bina Marga dan Infrastruktur Transportasi',f:'img/Fitria.png'},
+   {n:'Yosi Lusia',j:'Ketua Subkelompok Sumber Daya Air',f:'img/Yosi.png'},
+   {n:'Wenny Kustianingrum',j:'Ketua Subkelompok Perumahan Rakyat dan Kawasan Permukiman',f:'img/Wenny.png'}
+  ]
+ },
+ {
+  nama:'Kelompok Lingkungan Hidup dan Ruang Terbuka Hijau',
+  ketua:{n:'Sri Achyati',j:'Ketua Kelompok Lingkungan Hidup dan Ruang Terbuka Hijau',f:'img/Sri_Achyati.png'},
+  sub:[
+   {n:'Martiningtyas Yunitasari',j:'Ketua Subkelompok Kebersihan',f:'img/Martiningtyas.png'},
+   {n:'Safira Astari',j:'Ketua Subkelompok Lingkungan Hidup',f:'img/Safira.png'},
+   {n:'Nofrida',j:'Ketua Subkelompok Ruang Terbuka Hijau',f:'img/Nofrida.png'}
+  ]
+ },
+ {
+  nama:'Kelompok Pembangunan Kota',
+  ketua:{n:'Tri Rahayu P',j:'Ketua Kelompok Pembangunan Kota',f:'img/Tri_R_Pardianto.png'},
+  sub:[
+   {n:'Abung Hary Prayogo',j:'Kepala Subbagian Tata Usaha',f:'img/Abung_Hary_Prayogo.png'},
+   {n:'Riko Apriatresnayanto',j:'Ketua Subkelompok Pemantauan Program Pembangunan',f:'img/Riko.png'},
+   {n:'Eurika Putri Andita',j:'Ketua Subkelompok Pengendalian Penyelesaian Kewajiban',f:'img/Eurika_Putri_Andita.png'}
+  ]
+ },
+ {
+  nama:'Kelompok Penataan Ruang, Cipta Karya dan Pertanahan',
+  ketua:{n:'Zulfikri Alaidrus',j:'Ketua Kelompok Penataan Ruang, Cipta Karya dan Pertanahan',f:'img/Zulfikri.png'},
+  sub:[
+   {n:'Resfaniarto Indraka',j:'Ketua Subkelompok Bangunan Gedung',f:'img/Resfaniarto_Indraka.png'},
+   {n:'Mustiannis Syafaah',j:'Ketua Subkelompok Pengendalian Ruang dan Pertanahan',f:'img/Mustiannis.png'},
+   {n:'Dede Julfikar',j:'Ketua Subkelompok Pemanfaatan Ruang',f:'img/Dede.png'}
+  ]
+ }
+];
+
+return hd('Profil','Profil Jabatan')
++W(`<div class="grid" style="max-width:360px;margin:0 auto 28px">
+${p(kepala.n,kepala.j,kepala.f,true)}
+</div>
+${kelompok.map(k=>`
+<h3 class="st" style="font-size:1.3rem;margin-top:48px">${k.nama}</h3>
+<br>
+<div class="grid">
+${p(k.ketua.n,k.ketua.j,k.ketua.f)}
+</div>
+<br>
+<div class="grid">
+${k.sub.map(s=>p(s.n,s.j,s.f)).join('')}
+</div>`).join('')}`)},
+
+struktur:()=>{
+// id kelompok mengacu ke ORG; sub = [id, label di bagan]
+const kel=[
+ {id:'prcp',k:'Ketua Kelompok Penataan Ruang, Cipta Karya & Pertanahan',
+  s:[['bg','Ketua Subkelompok Bangunan Gedung'],['prp','Ketua Subkelompok Pengendalian Ruang & Pertanahan'],['pr','Ketua Subkelompok Pemanfaatan Ruang']]},
+ {id:'pk',k:'Ketua Kelompok Pembangunan Kota',
+  s:[['tu','Kepala Subbagian Tata Usaha'],['ppp','Ketua Subkelompok Pemantauan Program Pembangunan'],['ppk','Ketua Subkelompok Pengendalian Penyelesaian Kewajiban']]},
+ {id:'lhrth',k:'Ketua Kelompok Lingkungan Hidup dan Ruang Terbuka Hijau',
+  s:[['kb','Ketua Subkelompok Kebersihan'],['lh','Ketua Subkelompok Lingkungan Hidup'],['rth','Ketua Subkelompok Ruang Terbuka Hijau']]},
+ {id:'pupr',k:'Ketua Kelompok Pekerjaan Umum dan Perumahan Rakyat',
+  s:[['bm','Ketua Subkelompok Bina Marga & Infrastruktur Transportasi'],['sda','Ketua Subkelompok Sumber Daya Air'],['prkp','Ketua Subkelompok Perumahan Rakyat & Kawasan Permukiman']]}
+];
+return hd('Profil','Struktur Organisasi')
++W(`<div class="oc">
+  <div class="node k oc-root">Kepala Biro</div>
+  <div class="oc-v"></div>
+  <div class="oc-cols">
+    ${kel.map(c=>`<div class="oc-col">
+      <button type="button" class="node oc-head" data-org="${c.id}">${c.k}</button>
+      <ul class="oc-subs">${c.s.map(x=>`<li><button type="button" class="node s" data-org="${x[0]}">${x[1]}</button></li>`).join('')}</ul>
+    </div>`).join('')}
+  </div>
+</div>
+<p class="ss oc-hint"><span>👆 Klik kotak kelompok atau subkelompok untuk melihat tugas dan fungsinya</span></p>`)},
+
+visi:()=>hd('Profil','Visi & Misi')+W(`<div class="band rv" style="margin-bottom:28px"><div><h3>VISI</h3><h2>Jakarta Kota Maju, Lestari dan Berbudaya Yang Warganya Terlibat Dalam Mewujudkan Keberadaban, Keadilan dan Kesejahteraan Bagi Semua.</h2></div></div><h3 class="st">Misi</h3>`
+    +ol(['Menjadikan Jakarta kota yang aman, sehat, cerdas, berbudaya, dengan memperkuat nilai-nilai keluarga dan memberikan ruang kreativitas melalui kepemimpinan yang melibatkan, menggerakkan dan memanusiakan.',
+    'Menjadikan Jakarta kota yang memajukan kesejahteraan umum melalui terciptanya lapangan kerja, kestabilan dan keterjangkauan kebutuhan pokok, meningkatnya keadilan sosial, percepatan pembangunan infrastruktur, kemudahan investasi dan berbisnis, serta perbaikan pengelolaan tata ruang.',
+    'Menjadikan Jakarta tempat wahana aparatur negara yang berkarya, mengabdi, melayani, serta menyelesaikan berbagai permasalahan kota dan warga, secara efektif, meritokratis dan berintegritas.',
+    'Menjadikan Jakarta kota yang lestari, dengan pembangunan dan tata kehidupan yang memperkuat daya dukung lingkungan dan sosial.',
+    'Menjadikan Jakarta ibukota yang dinamis sebagai simpul kemajuan Indonesia yang bercirikan keadilan, kebangsaan dan kebhinekaan.'])),
+tugas:()=>hd('Profil','Tugas & Fungsi')+W(`<div class="two"><div><h3 class="st">Tugas</h3>
+${ol(['mengoordinasikan, merumuskan dan menyusun kebijakan, pemantauan dan evaluasi pelaksanaan kebijakan, dan pengoordinasian pelaksanaan tugas PD penyelenggaraan urusan pemerintahan bidang pekerjaan umum dan penataan ruang (pada sub urusan bidang jalan, sumber daya air, air minum, air limbah, drainase, bangunan gedung, penataan bangunan dan lingkungannya, penataan ruang, jasa konstruksi, permukiman, persampahan), bidang energi dan sumber daya mineral (pada sub urusan bidang geologi), bidang pertanahan, bidang perumahan rakyat dan kawasan permukiman, bidang lingkungan hidup, bidang kehutanan serta bidang penyelenggaraan penerangan jalan umum, jaringan utilitas, dan infrastruktur transportasi.'])}</div>
+<div><h3 class="st">Fungsi</h3>
+${ol(['penyusunan Rencana Strategis, Rencana Kerja, Rencana Kerja dan Anggaran Sekretariat Daerah sesuai lingkup tugas dan fungsinya',
+'pelaksanaan Dokumen Pelaksanaan Anggaran Sekretariat Daerah sesuai lingkup tugas dan fungsinya',
+'pengoordinasian, perumusan dan penyusunan kebijakan penyelenggaraan urusan pemerintahan bidang pekerjaan umum dan penataan ruang, bidang energi dan sumber daya mineral (pada sub urusan bidang geologi), bidang pertanahan, bidang perumahan rakyat dan kawasan permukiman, bidang lingkungan hidup, bidang kehutanan serta bidang penyelenggaraan penerangan jalan umum, jaringan utilitas dan infrastruktur transportasi',
+'pemantauan dan evaluasi pelaksanaan kebijakan penyelenggaraan urusan pemerintahan bidang pekerjaan umum dan penataan ruang, bidang energi dan sumber daya mineral (pada sub urusan bidang geologi), bidang pertanahan, bidang perumahan rakyat dan kawasan permukiman, bidang lingkungan hidup, bidang kehutanan serta bidang penyelenggaraan penerangan jalan umum, jaringan utilitas dan infrastruktur transportasi',
+'pengoordinasian pelaksanaan tugas PD dalam penyelenggaraan urusan pemerintahan bidang pekerjaan umum dan penataan ruang, bidang energi dan sumber daya mineral (pada sub urusan bidang geologi), bidang pertanahan, bidang perumahan rakyat dan kawasan permukiman, bidang lingkungan hidup, bidang kehutanan serta bidang penyelenggaraan penerangan jalan umum, jaringan utilitas dan infrastruktur transportasi',
+'pelaksanaan pengelolaan data dan informasi kebijakan penyelenggaraan urusan pemerintahan bidang pekerjaan umum dan penataan ruang, bidang energi dan sumber daya mineral (pada sub urusan bidang geologi), bidang pertanahan, bidang perumahan rakyat dan kawasan permukiman, bidang lingkungan hidup, bidang kehutanan serta bidang penyelenggaraan',
+'penerangan jalan umum, jaringan utilitas dan infrastruktur transportasi; pelaksanaan kesekretariatan Biro Pembangunan dan Lingkungan Hidup',
+'perumusan proses bisnis, standar dan prosedur Biro Pembangunan dan Lingkungan Hidup',
+'pelaporan dan pertanggungjawaban pelaksanaan tugas dan fungsi Biro Pembangunan dan Lingkungan Hidup',
+'pelaksanaan tugas dan fungsi kedinasan lain yang diberikan oleh Gubernur, Sekretaris Daerah dan/atau Asisten Pembangunan dan Lingkungan Hidup'])}
+</div></div>`),
+kontak:()=>hd('Profil','Kontak Kami')+W(`<div class="two"><div class="map rv"><div><div class="pin">📍</div><h3>Balai Kota DKI Jakarta</h3><p>Jl. Medan Merdeka Selatan No. 8-9, Jakarta Pusat 10110</p><br><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Balai+Kota+DKI+Jakarta">Buka di Google Maps</a></div></div><div class="card rv"><h3>Informasi Kontak</h3><br><p>📍 Gedung Blok G Lt. 11, Balai Kota DKI Jakarta (sesuaikan)</p><p>📞 (021) 0000 0000</p><p>✉️ biropembangunandanlh@gmail.com</p><p>🕗 Senin–Jumat, 08.00–16.00 WIB</p><div class="soc"><a href="#">Instagram</a><a href="#">YouTube</a></div></div></div>`),
+pengaduan: () => hd('Informasi', 'Layanan Pengaduan') + W(`
+  <style>
+    .pg-wrap {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+      align-items: start;
+    }
+    .pg-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: var(--sh);
+    }
+    .pg-head {
+      margin-bottom: 24px;
+    }
+    .pg-head h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-top: 6px;
+    }
+    .f-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .f-group label {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--tx);
+    }
+    .f-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .pg-info-box {
+      background: linear-gradient(135deg, rgba(10,155,74,.08), rgba(255,122,0,.08));
+      border: 1px dashed var(--g);
+      border-radius: 20px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .pg-info-box h4 {
+      font-size: 0.95rem;
+      color: var(--g2);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pg-info-box ul {
+      padding-left: 20px;
+      font-size: 0.86rem;
+      color: var(--mut);
+    }
+    @media (max-width: 850px) {
+      .pg-wrap { grid-template-columns: 1fr; }
+      .f-row { grid-template-columns: 1fr; }
+      .pg-card { padding: 22px; }
+    }
+  </style>
+
+  <div class="pg-wrap">
+    <!-- Kolom Formulir Pengaduan -->
+    <div class="pg-card rv">
+      <div class="pg-head">
+        <span class="tag">Form Aspirasi & Pengaduan</span>
+        <h3>Sampaikan Pengaduan Anda</h3>
+        <p class="ss" style="margin-bottom:0; font-size:0.9rem;">Masukan dan pengaduan Anda sangat berharga untuk mewujudkan Jakarta yang lebih hijau dan tertata.</p>
+      </div>
+
+      <form onsubmit="event.preventDefault(); toast('Pengaduan Anda telah berhasil dikirim!'); this.reset();">
+        <div class="f-row">
+          <div class="f-group">
+            <label for="nama">Nama Lengkap *</label>
+            <input required id="nama" type="text" placeholder="Masukkan nama Anda">
+          </div>
+          <div class="f-group">
+            <label for="email">Alamat Email *</label>
+            <input required id="email" type="email" placeholder="contoh@email.com">
+          </div>
+        </div>
+
+        <div class="f-row">
+          <div class="f-group">
+            <label for="telepon">Nomor WhatsApp / Telepon</label>
+            <input id="telepon" type="tel" placeholder="0812xxxxxxx">
+          </div>
+          <div class="f-group">
+            <label for="kategori">Kategori Urusan *</label>
+            <select id="kategori" required>
+              <option value="" disabled selected>-- Pilih Kategori --</option>
+              <option>Lingkungan Hidup & Kebersihan</option>
+              <option>Pembangunan & Penataan Ruang</option>
+              <option>Perumahan Rakyat & Kawasan Permukiman</option>
+              <option>Infrastruktur & Utilitas Kota</option>
+              <option>Layanan Informasi & PPID</option>
+              <option>Lainnya</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="f-group">
+          <label for="judul">Judul Pengaduan *</label>
+          <input required id="judul" type="text" placeholder="Ringkasan singkat topik pengaduan">
+        </div>
+
+        <div class="f-group">
+          <label for="isi">Isi Pengaduan / Aspirasi *</label>
+          <textarea required id="isi" rows="5" placeholder="Tuliskan detail lokasi, permasalahan, atau masukan secara lengkap..."></textarea>
+        </div>
+
+        <div class="f-group">
+          <label for="berkas">Lampiran / Foto Pendukung (Opsional)</label>
+          <input id="berkas" type="file" accept="image/*,.pdf" style="padding: 10px;">
+        </div>
+
+        <button class="btn o" type="submit" style="width: 100%; justify-content: center; margin-top: 10px; font-size: 1rem;">
+          🚀 Kirim Pengaduan Sekarang
+        </button>
+      </form>
+    </div>
+
+    <!-- Kolom Informasi & Alur -->
+    <div class="rv" style="display: flex; flex-direction: column; gap: 20px;">
+      <div class="pg-card" style="padding: 24px;">
+        <h3 style="font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+          <span>📌</span> Kanal Pengaduan Resmi Pemprov DKI
+        </h3>
+        <p style="font-size: 0.9rem; color: var(--mut); margin-bottom: 16px;">
+          Selain melalui form ini, Anda juga dapat menyampaikan pengaduan atau mengecek status laporan melalui kanal integrasi <strong>Cepat Respon Masyarakat (CRM)</strong> DKI Jakarta:
+        </p>
+        <div class="ul" style="gap: 8px;">
+          <a class="btn w" style="font-size: 0.85rem; padding: 10px 16px; width: 100%; justify-content: space-between;" href="https://jaki.jakarta.go.id" target="_blank">
+            <span>📱 Aplikasi JAKI</span> ↗
+          </a>
+          <a class="btn w" style="font-size: 0.85rem; padding: 10px 16px; width: 100%; justify-content: space-between;" href="https://crm.jakarta.go.id" target="_blank">
+            <span>🌐 Portal CRM DKI</span> ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="pg-info-box">
+        <h4><span>💡</span> Catatan Penting</h4>
+        <ul>
+          <li>Laporan akan ditindaklanjuti oleh unit kerja terkait sesuai kewenangannya.</li>
+          <li>Sertakan lokasi dan foto/bukti yang jelas agar mempermudah verifikasi lapangan.</li>
+          <li>Identitas pelapor dijamin kerahasiaannya sesuai ketentuan yang berlaku.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+`),
+
+laporan:()=>hd('Informasi','Laporan')+W(`<ul class="ul">${['Laporan Kinerja Instansi Pemerintah (LKjIP) 2025','Laporan Triwulan III 2026','Laporan Monitoring Program Strategis 2026','Laporan Keuangan Tahunan 2025'].map(x=>`<li class="rv"><span>📑 ${x}</span><a class="btn" href="#" onclick="toast('Tautkan file laporan');return false">Lihat</a></li>`).join('')}</ul>`),
+pengumuman:()=>hd('Informasi','Pengumuman')+W(`<ul class="ul">${['Jadwal Layanan Selama Libur Nasional','Pembaruan Sistem SIMPELMON','Undangan Rapat Koordinasi Bulanan','Pengumuman Hasil Seleksi Kegiatan'].map((x,i)=>`<li class="rv"><span>📢 ${x}</span><small>${15-i*3} Okt 2026</small></li>`).join('')}</ul>`),
+agenda:()=>hd('Informasi','Kalender Agenda')+W(`<ul class="ul">${[['20','Rapat Koordinasi Lingkungan Hidup'],['24','Monev Program Triwulan IV'],['28','Sosialisasi Layanan Digital'],['31','Evaluasi Kinerja Bulanan']].map(a=>`<li class="rv"><div class="date">${a[0]}<small>OKT</small></div><span style="flex:1">${a[1]}</span><small>09.00 WIB</small></li>`).join('')}</ul>`),
+ppid:()=>hd('Informasi','PPID')+W(`<p class="ss">Pejabat Pengelola Informasi dan Dokumentasi: layanan keterbukaan informasi publik.</p>`+cards([['🗓️','Informasi Berkala','Informasi yang diumumkan secara rutin.'],['⚡','Informasi Serta-Merta','Informasi yang berpotensi mengancam hajat hidup orang banyak.'],['📂','Informasi Setiap Saat','Informasi yang wajib tersedia setiap saat.'],['✍️','Permohonan Informasi','Ajukan permohonan informasi publik secara resmi.']])),
+layanan:()=>hd('Layanan','Layanan')+W(`<h3 class="st" id="int">Layanan Internal</h3><br><div class="grid">${[['📈','SIMPELMON','Sistem pemantauan dan evaluasi kinerja.','#'],['🗓️','Absen Rabu Transum','Presensi kegiatan Rabu Transum.','#']].map(l=>`<div class="card rv"><div class="ic">${l[0]}</div><h3>${l[1]}</h3><p>${l[2]}</p><br><a class="btn" target="_blank" rel="noopener" href="${l[3]}">Buka Web</a></div>`).join('')}</div><br><h3 class="st" id="ext" style="margin-top:20px">Layanan Eksternal</h3><br><div class="grid">${[['📚','JIKA','Jakarta Knowledge &amp; Policy Hub.','https://jika.jakarta.go.id'],['🎯','e-Monev','Sistem monitoring dan evaluasi elektronik.','#']].map(l=>`<div class="card rv"><div class="ic">${l[0]}</div><h3>${l[1]}</h3><p>${l[2]}</p><br><a class="btn o" target="_blank" rel="noopener" href="${l[3]}">Kunjungi</a></div>`).join('')}</div><p class="ss" style="margin-top:20px">Tautan SIMPELMON, Absen, dan e-Monev masih "#", ganti dengan URL aslinya.</p>`)
+};
+let io;
+function route(){const [id,x]=(location.hash.replace('#/','')||'home').split('/');const k=P[id]?id:'home';
+ closeM();
+ $('#main').innerHTML=P[k]();window.scrollTo(0,0);closeS();
+ const cur=k==='home'?0:M.findIndex(m=>m.s&&m.s.some(s=>s[0]===k));
+ document.querySelectorAll('[data-k]').forEach(e=>e.classList.toggle('on',+e.dataset.k===cur));
+ io&&io.disconnect();io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);const n=e.target.querySelector('[data-n]');if(n)count(n)}}),{threshold:.15});
+ document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+ if(x==='ext')setTimeout(()=>$('#ext')?.scrollIntoView(),50)}
+function count(n){const t=+n.dataset.n;let c=0;const s=setInterval(()=>{c+=Math.ceil(t/30);if(c>=t){c=t;clearInterval(s)}n.textContent=c},35)}
+addEventListener('hashchange',route);route();
+</script>
+<!-- ===== Kebijakan & Regulasi (67 peraturan): tempel tepat sebelum </body>, setelah script utama ===== -->
+<script>
+/* regulasi.js - Halaman Kebijakan & Regulasi (67 peraturan, 9 kategori)
+   Bisa dipasang sebagai file terpisah atau ditempel inline setelah script utama. */
+(function () {
+  var J = {
+    PD: ['Perda', 'Peraturan Daerah Provinsi DKI Jakarta'],
+    PG: ['Pergub', 'Peraturan Gubernur Provinsi DKI Jakarta'],
+    KG: ['Kepgub', 'Keputusan Gubernur Provinsi DKI Jakarta'],
+    IG: ['Ingub', 'Instruksi Gubernur Provinsi DKI Jakarta'],
+    SK: ['SK Sekda', 'Surat Keputusan Sekretaris Daerah Provinsi DKI Jakarta'],
+    IS: ['Insekda', 'Instruksi Sekretaris Daerah Provinsi DKI Jakarta']
+  };
+  // format baris: JENIS|nomor|tahun|tentang
+  var r = function (s) { var p = s.split('|'); return { j: p[0], n: p[1], y: p[2], t: p[3] }; };
+  var C = [
+    { k: 'A', i: '🏛️', n: 'Kelembagaan, Produk Hukum & Aset Daerah', d: [
+      'PD|2|2019|Perubahan atas Peraturan Daerah Nomor 5 Tahun 2016 tentang Perangkat Daerah',
+      'PG|26|2013|Pedoman Standardisasi Kantor Dan Rumah Dinas Jabatan Camat Dan Lurah',
+      'PG|27|2017|Pendelegasian Wewenang Penandatanganan Berita Acara Serah Terima Barang yang Berasal dari Perolehan Lainnya yang Sah Kepada Pemerintah Provinsi Daerah Khusus Ibukota Jakarta',
+      'PG|31|2021|Tata Cara Pembentukan Produk Hukum Daerah',
+      'PG|57|2022|Organisasi dan Tata Kerja Perangkat Daerah']},
+    { k: 'B', i: '🗺️', n: 'Tata Ruang & Pemanfaatan Ruang', d: [
+      'PD|1|2012|Rencana Tata Ruang Wilayah Jakarta 2030',
+      'PG|41|2017|Pengembalian Pemenuhanan Intensistas Melalui Penyerahan Lahan Pengganti',
+      'PG|106|2017|Pemanfaatan Ruang Kawasan Rorotan Sebagai Lahan Cadangan Untuk Ruang Terbuka Hijau dan Rumah Susun Umum',
+      'PG|147|2017|Pedoman Penyusunan Panduan Rancang Kota',
+      'PG|67|2019|Penyelenggaraan Kawasan Berorientasi Transit',
+      'PG|12|2020|Tata Cara Pemenuhan Kewajiban dari Pemegang Izin dan/atau Non Izin Pemanfaatan Ruang',
+      'PG|118|2020|Izin Pemanfaatan Ruang',
+      'PG|50|2021|Perubahan atas Pergub No. 67 Tahun 2019 Tentang Penyelenggaraan Kawasan Berorientasi Transit',
+      'PG|31|2022|Rencana Detail Tata Ruang Wilayah Perencanaan Provinsi DKI Jakarta',
+      'KG|1006|2017|Tim Pengkajian Usulan Lahan Pengganti dalam rangka Pengembalian Pemenuhan Intensitas']},
+    { k: 'C', i: '🏗️', n: 'Bangunan Gedung, KLB & Pembangunan', d: [
+      'PG|128|2012|Pengenaan Sanksi Pelanggaran Penyelenggaraan Bangunan Gedung',
+      'PG|210|2016|Pengenaan Kompensasi Terhadap Pelampauan Nilai Koefisien Lantai Bangunan',
+      'PG|147|2018|Pelayanan Perizinan Penyelenggaraan Bangunan Gedung',
+      'PG|135|2019|Pedoman Tata Bangunan',
+      'PG|44|2020|Tata Cara Pengusulan dan Penetapan Pekerjaan Rancang dan Bangun (Design and Build)',
+      'SK|23|2019|Prosedur Pelaksanaan Kompensasi Atas Pelampauan Nilai Koefisien Lantai Bangunan',
+      'SK|100|2022|Prosedur Pelaksanaan Penyusunan; Perjanjian Pemenuhan Kewajiban Kompensasi Atas Pelampauan Nilai Koefisien Lantai Bangunan dan Addendumnya']},
+    { k: 'D', i: '📐', n: 'Pertanahan', d: [
+      'PG|82|2016|Pedoman Pengadaan Tanah bagi Kepentingan Umum',
+      'PG|46|2017|Pengecualian Kewajiban Memperoleh Surat Persetujuan Prinsip Pembebasan Lokasi/Lahan',
+      'PG|140|2019|perubahan Atas Peraturan Gubenur Nomor 46 Tahun 2017 tentang Pengecualian Kewajiban Memperoleh Surat Persetujuan Prinsip Pembebasan Lokasi/Lahan',
+      'KG|540|1990|Petunjuk Pelaksanaan Pemberian Surat Persetujuan Prinsip Pembebasan Lokasi/Lahan atas Bidang Tanah untuk Pembangunan Fisik Kota di Daerah Khusus Ibukota Jakarta',
+      'KG|640|1992|Ketentuan Terhadap Pembebasan Lokasi/Lahan Tanpa Izin Dari Gubernur Kepala Daerah Khusus Ibukota Jakarta',
+      'KG|574|2019|Perubahan atas Keputusan Gubernur Nomor 162 Tahun 2019 tentang Gugus Tugas Reforma Agraria']},
+    { k: 'E', i: '🏘️', n: 'Rumah Susun, Permukiman & Prasarana, Sarana dan Utilitas (PSU)', d: [
+      'PD|7|2012|Prasarana, Sarana dan Utilitas Umum',
+      'PG|111|2014|Mekanisme Penghunian Rumah Susun Sederhana Sewa',
+      'PG|90|2018|Peningkatan Kualitas Permukiman Dalam Rangka Penataan Kawasan Permukiman Terpadu',
+      'PG|132|2018|Pembinaan Pengelolaan Rumah Susun Milik',
+      'PG|112|2019|Tata Cara Pemenuhan Kewajiban Pembiayaan dan Pembangunan Rumah Susun Murah/Sederhana Melalui Konversi oleh Para Pemegang Izin Pemanfaatan Ruang',
+      'PG|133|2019|Perubahan Atas PerGub Nomor 132 Tahun 2018 Tentang Pembinaan Pengelolaan Rumah Susun Milik',
+      'PG|78|2020|Perubahan Atas Peraturan Gubernur Nomor 112 Tahun 2019 tentang Tata Cara Pemenuhan Kewajiban Pembiayaan dan Pembangunan Rumah Susun Murah/Sederhana Melalui Konversi oleh Para Pemegang Izin Pemanfaatan Ruang',
+      'PG|70|2021|Perubahan Kedua Atas Pergub Nomor 132 Tahun 2018 Tentang Pembinaan Pengelolaan Rumah Susun Milik',
+      'PG|97|2021|Penyelesaian Pemenuhan Kewajiban Prasarana dan Sarana di Kawasan Perumahan dan Permukiman',
+      'PG|1|2022|Insentif Pembangunan Rumah Susun Umum Milik Tanpa Uang Muka dan Rumah Susun Umum Sewa',
+      'KG|354|1992|Petunjuk Teknis Pelaksanaan Pembangunan Rumah Susun Sederhana/Murah bagi Pemegang Surat Persetujuan Prinsip Pembebasan Lokasi/Lahan (SP3L) di Wilayah Daerah Khusus Ibukota Jakarta',
+      'IG|103|2015|Penagihan Kewajiban Prasarana, Sarana dan Utilitas Umum, dari Pemegang Surat Izin Penunjukan Penggunaan Tanah',
+      'SK|2827|2015|Pendelegasian Wewenang Penandatangan Perjanjian Pemenuhan Kewajiban Kepada Sekretaris Daerah Provinsi DKI Jakarta']},
+    { k: 'F', i: '🌿', n: 'Lingkungan Hidup, Perubahan Iklim & Pengendalian Pencemaran Udara', d: [
+      'PG|12|2016|Pelaksanaan Hari Bebas Kendaraan Bermotor',
+      'PG|17|2017|Penyelenggaraan Hutan Kota',
+      'PG|66|2020|Uji Emisi Gas Buang Kendaraan Bermotor',
+      'PG|79|2021|Revitalisasi Tangki Septik Rumah Tangga',
+      'PG|90|2021|Rencana Pembangunan Rendah Karbon Daerah Yang Berketahan Iklim',
+      'PG|9|2022|Ruang Terbuka Hijau',
+      'KG|671|2019|Tim Penyusun Rencana Induk Pengelolaan Keanekaragaman Hayati',
+      'KG|96|2020|Tim Kerja Mitigasi dan Adaptasi Bencana Iklim',
+      'KG|209|2023|Perubahan Atas Keputusan Gubernur Nomor 96 tahun 2020 tentang Tim Kerja Mitigasi dan Adaptasi Bencana Iklim',
+      'KG|576|2023|Stategi Pengendalian Pencemaran Udara',
+      'KG|593|2023|Satuan Tugas Pengendalian Pencemaran Udara',
+      'IG|66|2019|Pengendalian Kualitas Udara',
+      'IG|14|2021|Pelaksanaan Pemadaman lampu Dalam Rangka Aksi Hemat Energi dan Pengurangan Emisi Karbon',
+      'IG|17|2021|Pengendalian Dampak Bencana Iklim',
+      'IS|66|2023|Upaya Percepatan Penurunan Tingkat Pencemaran Udara']},
+    { k: 'G', i: '🪧', n: 'Penyelenggaraan Reklame', d: [
+      'PD|9|2014|Penyelenggaraan Reklame',
+      'PG|148|2017|Petunjuk Pelaksanaan Penyelenggaraan Reklame',
+      'PG|100|2021|Perubahan Atas Peraturan Gubernur Nomor 148 Tahun 2017 tentang Petunjuk Pelaksanaan Penyelenggaraan Reklame']},
+    { k: 'H', i: '📍', n: 'Penetapan Nama Fasilitas & Infrastruktur', d: [
+      'KG|1041|2022|Penetapan Nama Taman Ekologi Tebet (tebet Eco Park)',
+      'KG|1037|2022|Penetapan Nama Stadion Internasional Jakarta (Jakarta International Stadium)',
+      'KG|799|2023|Penetapan Nama Jalan Akses Kereta Cepat Halim Perdanakusumah',
+      'KG|859|2023|Penetapan Nama Grha Ali Sadikin']},
+    { k: 'I', i: '📁', n: 'Lainnya', d: [
+      'PD|3|2007|Pemakaman',
+      'PG|140|2014|Pedoman Penyusunan Rencana Kegiatan dan Anggaran Sekolah/ Madrasah',
+      'KG|292|2023|Cita Provinsi',
+      'KG|469|2023|Pemberian Pembebasan Retribusi Izin Pelaksanaan Penempatan Jaringan Utilitas pada Jakarta Sewerage System (JSS) Zona 1']}
+  ];
+  C.forEach(function (c) { c.d = c.d.map(r); });
+  var TOTAL = C.reduce(function (a, c) { return a + c.d.length; }, 0);
+
+  var esc = function (s) {
+    return String(s).replace(/[&<>"]/g, function (m) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m];
+    });
+  };
+  var full = function (x) {
+    var tt = /^perubahan|^Perubahan/.test(x.t) ? x.t : 'tentang ' + x.t;
+    return J[x.j][1] + ' Nomor ' + x.n + ' Tahun ' + x.y + ' ' + tt;
+  };
+  var st = { q: '', k: 'ALL', c: {} };
+  // ---- Unduh dokumen ----
+  // Letakkan PDF di folder FILE_BASE dengan nama: {jenis}-{nomor}-{tahun}.pdf (contoh: pergub-26-2013.pdf)
+  // Untuk file di lokasi lain, isi FILE_MAP: { 'pergub-26-2013': 'https://contoh.go.id/file.pdf' }
+  var FILE_BASE = 'dokumen/';
+  var FILE_MAP = {};
+  var fkey = function (x) { return (J[x.j][0] + '-' + x.n + '-' + x.y).toLowerCase().replace(/\s+/g, '-'); };
+  var furl = function (x) { var k = fkey(x); return FILE_MAP[k] || (FILE_BASE + k + '.pdf'); };
+
+  // ---------- CSS ----------
+  var css = document.createElement('style');
+  css.textContent =
+    '.rg-tools{display:grid;gap:14px;margin-bottom:26px}' +
+    '.rg-search{position:relative}' +
+    '.rg-search input{padding-left:46px;border-radius:999px;box-shadow:var(--sh)}' +
+    '.rg-search:before{content:"🔍";position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:1rem}' +
+    '.rg-chips{display:flex;flex-wrap:wrap;gap:8px}' +
+    '.rg-chips button{font:inherit;font-weight:600;font-size:.84rem;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--mut);cursor:pointer;transition:.25s}' +
+    '.rg-chips button:hover{color:var(--g);border-color:var(--g)}' +
+    '.rg-chips button.on{background:linear-gradient(135deg,var(--g),#18c46a);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(10,155,74,.3)}' +
+    '.rg-chips button b{margin-left:6px;opacity:.75;font-weight:700}' +
+    '.rg-info{color:var(--mut);font-weight:600;font-size:.9rem}' +
+    '.rg-cat{margin-top:34px}' +
+    '.rg-cat h3{display:flex;align-items:center;gap:12px;font-size:1.2rem;font-weight:800;margin-bottom:14px}' +
+    '.rg-cat h3 em{font-style:normal;font-size:.8rem;font-weight:700;color:var(--o);background:rgba(255,122,0,.12);padding:3px 12px;border-radius:999px}' +
+    '.rg-list{list-style:none;padding:0;display:grid;gap:10px}' +
+    '.rg-list li{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 18px;display:flex;gap:14px;align-items:flex-start;transition:.25s}' +
+    '.rg-list li:hover{transform:translateX(6px);border-color:var(--g)}' +
+    '.rg-no{flex:none;width:34px;height:34px;border-radius:50%;background:var(--g);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.78rem;margin-top:2px}' +
+    '.rg-body{flex:1;min-width:0}' +
+    '.rg-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:4px}' +
+    '.rg-jenis{font-size:.74rem;font-weight:800;color:var(--g2);background:rgba(10,155,74,.14);padding:2px 10px;border-radius:999px}' +
+    ':root[data-theme="dark"] .rg-jenis{color:var(--g)}' +
+    '@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .rg-jenis{color:var(--g)}}' +
+    '.rg-nt{font-size:.8rem;font-weight:700;color:var(--mut)}' +
+    '.rg-t{font-size:.94rem;line-height:1.55;overflow-wrap:anywhere}' +
+    '.rg-t mark{background:rgba(255,122,0,.28);color:inherit;border-radius:4px;padding:0 2px}' +
+    '.rg-empty{text-align:center;padding:48px 20px;color:var(--mut);font-weight:600}' +
+    '.rg-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}' +
+    '.rg-all{display:flex;gap:8px}' +
+    '.rg-all button{font:inherit;font-weight:700;font-size:.8rem;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--g);cursor:pointer;transition:.25s}' +
+    '.rg-all button:hover{background:var(--g);color:#fff;border-color:var(--g)}' +
+    '.rg-ch{display:flex;align-items:center;gap:12px;width:100%;font:inherit;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px 16px;cursor:pointer;color:var(--tx);box-shadow:var(--sh);transition:.25s}' +
+    '.rg-ch:hover{border-color:var(--g)}' +
+    '.rg-ch:focus-visible{outline:3px solid var(--o);outline-offset:3px}' +
+    '.rg-ci{font-size:1.25rem}' +
+    '.rg-cn{flex:1;min-width:0;font-weight:800;font-size:1.05rem;line-height:1.35}' +
+    '.rg-ch em{font-style:normal;font-size:.8rem;font-weight:700;color:var(--o);background:rgba(255,122,0,.12);padding:3px 12px;border-radius:999px}' +
+    '.rg-arrow{flex:none;font-size:.78rem;font-weight:800;color:var(--g);background:rgba(10,155,74,.12);padding:6px 14px;border-radius:999px;white-space:nowrap;transition:.25s}' +
+    '.rg-ch:hover .rg-arrow{background:var(--g);color:#fff}' +
+    '.rg-cat .rg-list{margin-top:12px}' +
+    '.rg-dl{flex:none;align-self:center;padding:8px 16px;font-size:.82rem;gap:6px}' +
+    '@media (max-width:640px){.rg-list li{padding:12px 14px;flex-wrap:wrap}.rg-no{width:30px;height:30px}.rg-dl{margin-left:44px}.rg-arrow{padding:6px 10px}}';
+  document.head.appendChild(css);
+
+  // ---------- render ----------
+  function hl(text, q) {
+    var t = esc(text);
+    if (!q) return t;
+    var e = esc(q).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return t.replace(new RegExp('(' + e + ')', 'gi'), '<mark>$1</mark>');
+  }
+
+  function listHTML() {
+    var q = st.q.trim().toLowerCase(), shown = 0, out = '';
+    C.forEach(function (c) {
+      if (st.k !== 'ALL' && st.k !== c.k) return;
+      var rows = [];
+      c.d.forEach(function (x, idx) {
+        var txt = full(x).toLowerCase() + ' ' + J[x.j][0].toLowerCase();
+        if (!q || txt.indexOf(q) > -1) rows.push([x, idx]);
+      });
+      if (!rows.length) return;
+      shown += rows.length;
+      var closed = !q && st.c[c.k];
+      var items = closed ? '' : '<ul class="rg-list">' + rows.map(function (p) {
+        var x = p[0];
+        var tt = /^perubahan/i.test(x.t) ? x.t : 'tentang ' + x.t;
+        return '<li><span class="rg-no">' + (offset(c.k) + p[1] + 1) + '</span><div class="rg-body">' +
+          '<div class="rg-meta"><span class="rg-jenis">' + J[x.j][0] + '</span><span class="rg-nt">No. ' + x.n + ' Tahun ' + x.y + '</span></div>' +
+          '<div class="rg-t">' + hl(J[x.j][1] + ' Nomor ' + x.n + ' Tahun ' + x.y + ' ' + tt, st.q.trim()) + '</div></div>' +
+          '<a class="btn rg-dl" href="' + furl(x) + '" download="' + fkey(x) + '.pdf" title="Unduh ' + esc(J[x.j][0] + ' No. ' + x.n + ' Tahun ' + x.y) + '">&#11015; Unduh</a></li>';
+      }).join('') + '</ul>';
+      out += '<div class="rg-cat"><button type="button" class="rg-ch" data-rt="' + c.k + '" aria-expanded="' + (!closed) + '">' +
+        '<span class="rg-ci">' + c.i + '</span><span class="rg-cn">' + esc(c.n) + '</span><em>' + rows.length + '</em>' +
+        '<span class="rg-arrow">' + (closed ? '&#9660; Buka' : '&#9650; Tutup') + '</span></button>' + items + '</div>';
+    });
+    var info = shown === TOTAL ? 'Menampilkan seluruh <b>' + TOTAL + '</b> peraturan'
+      : 'Ditemukan <b>' + shown + '</b> dari ' + TOTAL + ' peraturan';
+    return { info: info, html: out || '<div class="rg-empty">Tidak ada peraturan yang cocok dengan pencarian Anda.</div>' };
+  }
+  // nomor urut global (1..67) mengikuti urutan kategori
+  function offset(k) {
+    var o = 0;
+    for (var i = 0; i < C.length; i++) { if (C[i].k === k) break; o += C[i].d.length; }
+    return o;
+  }
+
+  function update() {
+    var res = listHTML();
+    var info = document.getElementById('rg-info'), box = document.getElementById('rg-out');
+    if (info) info.innerHTML = res.info;
+    if (box) box.innerHTML = res.html;
+    document.querySelectorAll('.rg-chips button').forEach(function (b) {
+      b.classList.toggle('on', b.dataset.rk === st.k);
+    });
+  }
+
+  var regulasiPage = function () {
+    st.q = ''; st.k = 'ALL'; st.c = {};
+    var chips = '<button type="button" class="on" data-rk="ALL">Semua<b>' + TOTAL + '</b></button>' +
+      C.map(function (c) {
+        return '<button type="button" data-rk="' + c.k + '">' + c.i + ' ' + esc(c.n.split(',')[0].split(' & ')[0]) + '<b>' + c.d.length + '</b></button>';
+      }).join('');
+    var res = listHTML();
+    return hd('Profil', 'Kebijakan & Regulasi') +
+      W('<div class="rg-tools"><div class="rg-search"><input id="rg-q" type="search" placeholder="Cari peraturan: judul, nomor, atau tahun..." autocomplete="off"></div>' +
+        '<div class="rg-chips">' + chips + '</div><div class="rg-bar"><div class="rg-info" id="rg-info">' + res.info + '</div>' +
+        '<div class="rg-all"><button type="button" data-ra="open">&#9660; Buka semua</button><button type="button" data-ra="close">&#9650; Tutup semua</button></div></div></div>' +
+        '<div id="rg-out">' + res.html + '</div>');
+  };
+
+  document.addEventListener('input', function (e) {
+    if (e.target && e.target.id === 'rg-q') { st.q = e.target.value; update(); }
+  });
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-rk]');
+    if (b) { st.k = b.dataset.rk; update(); return; }
+    var t = e.target.closest && e.target.closest('[data-rt]');
+    if (t) { st.c[t.dataset.rt] = !st.c[t.dataset.rt]; update(); return; }
+    var a = e.target.closest && e.target.closest('[data-ra]');
+    if (a) {
+      var close = a.dataset.ra === 'close';
+      C.forEach(function (c) { st.c[c.k] = close; });
+      update(); return;
+    }
+    var d = e.target.closest && e.target.closest('.rg-dl');
+    if (d && location.protocol.indexOf('http') === 0) {
+      e.preventDefault(); // di server: cek dulu file-nya ada
+      fetch(d.href, { method: 'HEAD' }).then(function (r) {
+        if (!r.ok) { toast('File belum tersedia'); return; }
+        var l = document.createElement('a');
+        l.href = d.href; l.download = d.getAttribute('download');
+        document.body.appendChild(l); l.click(); l.remove();
+      }).catch(function () { toast('File belum tersedia'); });
+    }
+  });
+
+  // ===================== BERITA (daftar kartu + halaman detail) =====================
+  // Cara menambah berita: tambahkan objek baru di array BERITA (id harus unik).
+  // Foto: taruh di img/berita/ lalu isi field img. Jika file foto tidak ada, tampil placeholder hijau.
+  // body: string = paragraf, {q:'...'} = kutipan, {more:ID} = kotak "Baca Juga" ke berita lain.
+  var HARI = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+  var BULAN = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+  var BERITA = [
+    { id: 1, d: '2026-10-12', cat: 'Kolaborasi', by: 'Humas BPLH', cap: 'Rapat koordinasi program pengelolaan lingkungan hidup',
+      t: 'Rapat Koordinasi Program Pengelolaan Lingkungan Hidup 2026', img: 'img/berita/1.jpg', tags: ['#BiroPLH', '#JakartaHijau'],
+      body: ['Jakarta – Biro Pembangunan dan Lingkungan Hidup Setda Provinsi DKI Jakarta menyelenggarakan rapat koordinasi program pengelolaan lingkungan hidup tahun 2026 bersama perangkat daerah terkait.',
+        'Rapat membahas sinkronisasi program, pembagian peran antarperangkat daerah, serta tindak lanjut capaian pengendalian pencemaran udara dan penghijauan kota.',
+        { q: 'Koordinasi yang kuat menjadi kunci agar program lingkungan hidup berjalan selaras dan terukur.' }, { more: 2 },
+        'Hasil rapat akan dituangkan dalam rencana tindak lanjut dan dipantau secara berkala.'], sign: '-Humas BPLH' },
+    { id: 2, d: '2026-10-08', cat: 'Pembangunan', by: 'Humas BPLH', cap: 'Monitoring capaian pembangunan triwulan III',
+      t: 'Monitoring Capaian Pembangunan Triwulan III', img: 'img/berita/2.jpg', tags: ['#BiroPLH', '#Monev'],
+      body: ['Jakarta – Biro Pembangunan dan Lingkungan Hidup melakukan monitoring capaian program pembangunan daerah pada triwulan III tahun 2026.',
+        'Monitoring mencakup progres fisik, serapan anggaran, serta kendala yang dihadapi perangkat daerah pelaksana agar dapat segera dicarikan solusi.', { more: 3 }], sign: '-Humas BPLH' },
+    { id: 3, d: '2026-10-01', cat: 'Lingkungan', by: 'Humas BPLH', cap: 'Kampanye Jakarta Bersih dan Hijau',
+      t: 'Kampanye Jakarta Bersih dan Hijau Bersama Perangkat Daerah', img: 'img/berita/3.jpg', tags: ['#JakartaBersih', '#JakartaHijau'],
+      body: ['Jakarta – Kampanye Jakarta Bersih dan Hijau digelar bersama perangkat daerah untuk mengajak warga menjaga kebersihan dan memperluas ruang terbuka hijau.',
+        { q: 'Kebersihan dan kehijauan kota adalah tanggung jawab bersama.' }, 'Kegiatan ini diharapkan menumbuhkan kebiasaan baru dalam mengelola sampah dan merawat taman di lingkungan masing-masing.'], sign: '-Humas BPLH' },
+    { id: 4, d: '2026-09-24', cat: 'Layanan', by: 'Humas BPLH', cap: 'Sosialisasi layanan digital',
+      t: 'Sosialisasi Layanan Digital Biro Pembangunan dan Lingkungan Hidup', img: 'img/berita/4.jpg', tags: ['#LayananDigital'],
+      body: ['Jakarta – Biro Pembangunan dan Lingkungan Hidup mensosialisasikan layanan digital internal dan eksternal kepada seluruh pegawai.',
+        'Sosialisasi bertujuan memastikan sistem pemantauan, presensi, dan pengelolaan pengetahuan dimanfaatkan secara optimal.'], sign: '-Humas BPLH' },
+    { id: 5, d: '2026-09-17', cat: 'Evaluasi', by: 'Humas BPLH', cap: 'Evaluasi kinerja bulanan',
+      t: 'Evaluasi Kinerja Bulanan Perangkat Daerah Mitra', img: 'img/berita/5.jpg', tags: ['#Evaluasi', '#Kinerja'],
+      body: ['Jakarta – Evaluasi kinerja bulanan dilaksanakan untuk menilai capaian program perangkat daerah mitra Biro Pembangunan dan Lingkungan Hidup.',
+        'Hasil evaluasi menjadi bahan perbaikan perencanaan dan penguatan koordinasi pada bulan berikutnya.'], sign: '-Humas BPLH' },
+    { id: 6, d: '2026-09-10', cat: 'Penataan Ruang', by: 'Humas BPLH', cap: 'Sinkronisasi program penataan ruang dan perumahan',
+      t: 'Sinkronisasi Program Penataan Ruang dan Perumahan Rakyat', img: 'img/berita/6.jpg', tags: ['#TataRuang', '#Perumahan'],
+      body: ['Jakarta – Biro Pembangunan dan Lingkungan Hidup memfasilitasi sinkronisasi program penataan ruang dan perumahan rakyat antarperangkat daerah.',
+        'Sinkronisasi dilakukan agar program yang berjalan selaras dengan rencana tata ruang dan kebutuhan hunian warga Jakarta.'], sign: '-Humas BPLH' }
+  ];
+  BERITA.sort(function (a, b) { return a.d < b.d ? 1 : -1; });
+  var PER = 9, bp = 0;
+  var bfind = function (id) { for (var i = 0; i < BERITA.length; i++) if (BERITA[i].id === +id) return BERITA[i]; return null; };
+  var bd = function (s) {
+    var p = s.split('-'), d = new Date(+p[0], +p[1] - 1, +p[2]), h = HARI[d.getDay()], b = BULAN[+p[1] - 1];
+    return { h: h, d: p[2], b: b, y: p[0], hs: h.slice(0, 3), bs: b.slice(0, 3) };
+  };
+  var bimg = function (a, cls) {
+    return '<div class="bn-img ' + (cls || '') + '"><span class="bn-ph">🌳</span><img src="' + esc(a.img) + '" alt="' + esc(a.t) + '" loading="lazy" onerror="this.style.display=\'none\'"></div>';
+  };
+  var bdate = function (t, cls) {
+    return '<div class="bn-date ' + (cls || '') + '"><small>' + t.h + '</small><b>' + t.d + '</b><span>' + t.b + ' ' + t.y + '</span></div>';
+  };
+  function bcards() {
+    var pages = Math.ceil(BERITA.length / PER);
+    if (bp >= pages) bp = 0;
+    var html = '<div class="bn-grid">' + BERITA.slice(bp * PER, bp * PER + PER).map(function (a) {
+      return '<a class="bn-card" href="#/berita/' + a.id + '">' + bdate(bd(a.d)) + bimg(a) + '<h3>' + esc(a.t) + '</h3></a>';
+    }).join('') + '</div>';
+    if (pages > 1) {
+      html += '<div class="bn-pager">';
+      for (var i = 0; i < pages; i++) html += '<button type="button" data-bp="' + i + '"' + (i === bp ? ' class="on"' : '') + '>' + (i + 1) + '</button>';
+      html += '</div>';
+    }
+    return html;
+  }
+  function bdetail(a) {
+    var t = bd(a.d), url = location.href.split('#')[0] + '#/berita/' + a.id, u = encodeURIComponent(url), tt = encodeURIComponent(a.t);
+    var words = a.body.map(function (b) { return typeof b === 'string' ? b : (b.q || ''); }).join(' ').split(/\s+/).length;
+    var mins = Math.max(1, Math.round(words / 180));
+    var first = true;
+    var body = a.body.map(function (b) {
+      if (typeof b === 'string') {
+        var c = first ? ' class="bn-lead"' : '';
+        first = false;
+        return '<p' + c + '>' + esc(b) + '</p>';
+      }
+      if (b.q) return '<blockquote>' + esc(b.q) + '</blockquote>';
+      var o = b.more && bfind(b.more);
+      return o ? '<p class="bn-more"><b>Baca Juga</b><a href="#/berita/' + o.id + '">' + esc(o.t) + '</a></p>' : '';
+    }).join('');
+
+    var side = BERITA.filter(function (x) { return x.id !== a.id; }).slice(0, 4).map(function (x) {
+      var s = bd(x.d);
+      return '<a class="bn-si" href="#/berita/' + x.id + '"><small>' + s.d + ' ' + s.bs + ' ' + s.y + '</small><h4>' + esc(x.t) + '</h4></a>';
+    }).join('');
+
+    var idx = BERITA.indexOf(a), newer = BERITA[idx - 1], older = BERITA[idx + 1];
+    var pn = function (x, dir) {
+      if (!x) return '<span></span>';
+      return '<a class="bn-pn-i ' + dir + '" href="#/berita/' + x.id + '"><small>' +
+        (dir === 'prev' ? '← Berita sebelumnya' : 'Berita selanjutnya →') + '</small><b>' + esc(x.t) + '</b></a>';
+    };
+
+    var share =
+      '<a target="_blank" rel="noopener" title="Facebook" href="https://www.facebook.com/sharer/sharer.php?u=' + u + '">f</a>' +
+      '<a target="_blank" rel="noopener" title="X / Twitter" href="https://twitter.com/intent/tweet?url=' + u + '&text=' + tt + '">𝕏</a>' +
+      '<a target="_blank" rel="noopener" title="WhatsApp" href="https://wa.me/?text=' + tt + '%20' + u + '">WA</a>' +
+      '<a target="_blank" rel="noopener" title="LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=' + u + '">in</a>' +
+      '<button type="button" title="Salin tautan" data-copy="' + esc(url) + '">🔗</button>';
+
+    return W('<div id="bn-prog"></div><article class="bn-art">' +
+      '<a class="bn-back" href="#/berita">← Kembali ke berita</a>' +
+      '<header class="bn-head">' +
+        '<span class="bn-cat"></span>' +
+        '<h3>' + esc(a.t) + '</h3>' +
+        '<div class="bn-byline">' +
+          '<span>' + t.h + ', ' + t.d + ' ' + t.b + ' ' + t.y + '</span><i class="bn-dot"></i>' +
+          
+        '</div>' +
+        '<span class="bn-cat"></span>' +
+      '</header>' +
+      '<figure class="bn-fig">' + bimg(a, 'bn-hero') + '<figcaption>' + esc(a.cap) + '</figcaption></figure>' +
+      '<div class="bn-layout">' +
+        '<aside class="bn-rail"><small>Bagikan</small>' + share + '</aside>' +
+        '<div class="bn-main">' +
+          '<div class="bn-body">' + body + (a.sign ? '<p class="bn-sign">' + esc(a.sign) + '</p>' : '') + '</div>' +
+          '<div class="bn-tags">' + a.tags.map(function (g) { return '<span>' + esc(g) + '</span>'; }).join('') + '</div>' +
+          '<nav class="bn-pn">' + pn(newer, 'prev') + pn(older, 'next') + '</nav>' +
+        '</div>' +
+        '<aside class="bn-aside"><div class="bn-sbox"><h4>Berita Terbaru</h4>' + side + '<a class="btn w bn-all" href="#/berita">Semua berita →</a></div></aside>' +
+      '</div>' +
+    '</article>');
+  }
+  var beritaPage = function () {
+    var m = /^#\/berita\/(\d+)/.exec(location.hash), a = m && bfind(m[1]);
+    if (a) return bdetail(a);
+    bp = 0;
+    return hd('Informasi', 'Berita') + W('<div id="bn-list">' + bcards() + '</div>');
+  };
+  var css2 = document.createElement('style');
+  css2.textContent =
+    /* ---- daftar kartu ---- */
+    '.bn-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:68px 32px;padding-top:36px}' +
+    '.bn-card{position:relative;display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px 16px 18px;box-shadow:var(--sh);transition:.3s}' +
+    '.bn-card:hover{transform:translateY(-6px);border-color:var(--g);box-shadow:0 18px 40px rgba(10,155,74,.18)}' +
+    '.bn-date{position:absolute;top:-34px;left:34px;z-index:2;width:128px;text-align:center;background:linear-gradient(135deg,var(--o),#ff9a3c);color:#fff;border-radius:18px;padding:12px 8px;line-height:1.15;box-shadow:0 10px 22px rgba(255,122,0,.35)}' +
+    '.bn-date small{display:block;font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.04em}' +
+    '.bn-date b{display:block;font-size:2rem;font-weight:800}' +
+    '.bn-date span{display:block;font-size:.76rem;font-weight:600;text-transform:uppercase}' +
+    '.bn-img{position:relative;overflow:hidden;border-radius:26px;aspect-ratio:7/5;background:linear-gradient(135deg,var(--g),#7ddc9b 60%,#ffd27a);display:grid;place-items:center}' +
+    '.bn-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}' +
+    '.bn-card:hover .bn-img img{transform:scale(1.06)}' +
+    '.bn-ph{font-size:3.5rem}' +
+    '.bn-card h3{margin-top:18px;font-size:1.2rem;line-height:1.4;font-weight:800;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}' +
+    '.bn-pager{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:40px}' +
+    '.bn-pager button{font:inherit;font-weight:700;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--tx);cursor:pointer;transition:.25s}' +
+    '.bn-pager button:hover,.bn-pager button.on{background:var(--g);color:#fff;border-color:var(--g)}' +
+
+    /* ---- detail: progress bar ---- */
+    '#bn-prog{position:fixed;top:0;left:0;height:4px;width:0;z-index:90;background:linear-gradient(90deg,var(--g),#18c46a,var(--o));border-radius:0 4px 4px 0;transition:width .1s linear}' +
+
+    /* ---- detail: kepala artikel ---- */
+    '.bn-art{max-width:1120px;margin:0 auto}' +
+    '.bn-back{display:inline-flex;font-weight:700;color:var(--g);margin-bottom:22px;transition:.25s}.bn-back:hover{color:var(--o);transform:translateX(-4px)}' +
+    '.bn-head{max-width:860px;margin:0 auto 32px;text-align:center}' +
+    '.bn-cat{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,var(--o),#ff9a3c);padding:6px 16px;border-radius:999px;box-shadow:0 8px 18px rgba(255,122,0,.3)}' +
+    '.bn-art h1{font-size:clamp(1.8rem,4.4vw,3rem);line-height:1.18;font-weight:800;letter-spacing:-.01em;margin:18px 0 22px}' +
+    '.bn-byline{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 14px;color:var(--mut);font-size:.82rem;font-weight:600}' +
+    '.bn-byline b{color:var(--tx)}' +
+    '.bn-av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--g),#ffb347);box-shadow:0 0 0 3px var(--card),0 0 0 5px var(--g)}' +
+    '.bn-dot{width:5px;height:5px;border-radius:50%;background:var(--line);display:inline-block}' +
+
+    /* ---- detail: gambar utama ---- */
+    '.bn-fig{margin:0}' +
+    '.bn-hero{aspect-ratio:21/9;border-radius:32px;box-shadow:0 24px 60px rgba(6,95,70,.22)}' +
+    '.bn-fig figcaption{text-align:center;color:var(--mut);font-size:.88rem;font-style:italic;margin-top:14px}' +
+
+    /* ---- detail: tata letak 3 kolom ---- */
+    '.bn-layout{display:grid;grid-template-columns:56px minmax(0,720px) 300px;gap:40px;justify-content:center;align-items:start;margin-top:40px}' +
+    '.bn-rail{position:sticky;top:100px;display:flex;flex-direction:column;align-items:center;gap:10px}' +
+    '.bn-rail small{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:4px}' +
+    '.bn-rail a,.bn-rail button{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font:inherit;font-weight:800;font-size:.9rem;border:1px solid var(--line);background:var(--card);color:var(--g);cursor:pointer;box-shadow:var(--sh);transition:.25s}' +
+    '.bn-rail a:hover,.bn-rail button:hover{background:var(--g);color:#fff;border-color:var(--g);transform:translateY(-3px) scale(1.06)}' +
+
+    /* ---- detail: isi ---- */
+    '.bn-body p{font-size:1.08rem;line-height:1.95;margin-bottom:20px}' +
+    '.bn-lead::first-letter{float:left;font-size:3.8rem;line-height:.85;font-weight:800;color:var(--o);padding:6px 12px 0 0}' +
+    '.bn-body blockquote{position:relative;margin:30px 0;padding:24px 28px 24px 34px;border-radius:24px;background:linear-gradient(135deg,rgba(10,155,74,.12),rgba(255,122,0,.10));border-left:6px solid var(--o);font-size:1.2rem;font-weight:700;font-style:italic;line-height:1.6}' +
+    '.bn-more{padding:16px 20px;border:1px dashed var(--g);border-radius:18px;background:var(--card)}' +
+    '.bn-more b{display:block;font-size:.76rem;text-transform:uppercase;letter-spacing:.05em;color:var(--o)}' +
+    '.bn-more a{font-weight:700;color:var(--g)}.bn-more a:hover{text-decoration:underline}' +
+    '.bn-sign{font-weight:700;color:var(--mut);text-align:right}' +
+    '.bn-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;padding-top:22px;border-top:1px dashed var(--line)}' +
+    '.bn-tags span{font-weight:700;font-size:.86rem;color:var(--g);background:rgba(10,155,74,.12);padding:7px 16px;border-radius:999px;transition:.25s}' +
+    '.bn-tags span:hover{background:var(--g);color:#fff;transform:translateY(-2px)}' +
+
+    /* ---- detail: sebelumnya / selanjutnya ---- */
+    '.bn-pn{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}' +
+    '.bn-pn-i{display:block;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px 20px;box-shadow:var(--sh);transition:.3s}' +
+    '.bn-pn-i.next{text-align:right;grid-column:2}' +
+    '.bn-pn-i:hover{transform:translateY(-4px);border-color:var(--g)}' +
+    '.bn-pn-i small{display:block;color:var(--o);font-weight:800;font-size:.78rem;margin-bottom:6px}' +
+    '.bn-pn-i b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.4}' +
+
+    /* ---- detail: sidebar ---- */
+    '.bn-aside{position:sticky;top:100px}' +
+    '.bn-sbox{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:22px;box-shadow:var(--sh)}' +
+    '.bn-sbox h4{font-size:1.05rem;font-weight:800;margin-bottom:6px;padding-bottom:12px;border-bottom:3px solid var(--o);display:inline-block}' +
+    '.bn-si{display:block;padding:14px 0;border-bottom:1px solid var(--line);transition:.25s}' +
+    '.bn-si:hover{padding-left:8px}' +
+    '.bn-si small{color:var(--o);font-weight:700;font-size:.78rem}' +
+    '.bn-si h4{margin:4px 0 0;font-size:.95rem;line-height:1.45;font-weight:700;border:0;padding:0;display:block}' +
+    '.bn-si:hover h4{color:var(--g)}' +
+    '.bn-all{width:100%;justify-content:center;margin-top:18px;padding:11px 20px;font-size:.9rem}' +
+
+    /* ---- responsif ---- */
+    '@media (max-width:1060px){' +
+      '.bn-layout{grid-template-columns:minmax(0,1fr);gap:28px;max-width:760px;margin-left:auto;margin-right:auto}' +
+      '.bn-rail{position:static;order:2;flex-direction:row;justify-content:center;flex-wrap:wrap}' +
+      '.bn-rail small{width:100%;text-align:center}' +
+      '.bn-main{order:1}.bn-aside{position:static;order:3}' +
+    '}' +
+    '@media (max-width:640px){' +
+      '.bn-grid{gap:64px 20px}' +
+      '.bn-hero{aspect-ratio:16/10;border-radius:24px}' +
+      '.bn-body p{font-size:1rem;line-height:1.85}' +
+      '.bn-body blockquote{font-size:1.05rem;padding:18px 20px}' +
+      '.bn-pn{grid-template-columns:1fr}.bn-pn-i.next{grid-column:auto}' +
+    '}';
+  document.head.appendChild(css2);
+
+  // progress bar baca artikel
+  addEventListener('scroll', function () {
+    var bar = document.getElementById('bn-prog'), art = document.querySelector('.bn-art');
+    if (!bar || !art) return;
+    var r = art.getBoundingClientRect(), total = r.height - innerHeight;
+    bar.style.width = (total > 0 ? Math.min(100, Math.max(0, -r.top / total * 100)) : 0) + '%';
+  }, { passive: true });
+
+  document.addEventListener('click', function (e) {
+    var p = e.target.closest && e.target.closest('[data-bp]');
+    if (p) { bp = +p.dataset.bp; var l = document.getElementById('bn-list'); if (l) l.innerHTML = bcards(); window.scrollTo(0, 0); return; }
+    var c = e.target.closest && e.target.closest('[data-copy]');
+    if (c) {
+      var v = c.dataset.copy, ok = function () { toast('Tautan berhasil disalin!'); };
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(v).then(ok, ok);
+      else { var ta = document.createElement('textarea'); ta.value = v; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch (x) {} ta.remove(); ok(); }
+    }
+  });
+
+  // pasang ke router; aman walau urutan script terbalik
+  function mount() {
+    P.regulasi = regulasiPage;
+    P.berita = beritaPage;
+    if (/regulasi|berita/.test(location.hash)) route();
+  }
+  try { P; mount(); }
+  catch (e) { document.addEventListener('DOMContentLoaded', mount); }
+})();
+</script>
+
+<!-- ===== Halaman Laporan: tempel tepat sebelum </body>, setelah script Regulasi/Berita ===== -->
+<script>
+  /* laporan.js - Halaman Laporan (7 kategori, 15 dokumen) dengan daftar a, b, c yang terbuka saat tombol diklik.
+     Menimpa P.laporan yang lama. Hapus baris 'laporan:()=>...' lama di script utama jika ingin rapi (opsional). */
+  (function () {
+    // Letakkan PDF di folder FILE_BASE. Nama file otomatis dari field "f" (contoh: dokumen/laporan/lap-informasi-2023.pdf).
+    // Untuk file di lokasi lain, isi FILE_MAP: { 'lap-informasi-2023': 'https://contoh.go.id/file.pdf' }
+    var FILE_BASE = 'dokumen/laporan/';
+    var FILE_MAP = {};
+  
+    var L = [
+      { i: '📋', n: 'Laporan Tahunan Pelayanan Informasi', d: [
+        ['lap-informasi-2023', 'Laporan Tahunan Permohonan Informasi Publik Tahun 2023'],
+        ['lap-informasi-2024', 'Laporan Tahunan Permohonan Informasi Publik Tahun 2024'],
+        ['lap-informasi-2025', 'Laporan Tahunan Permohonan Informasi Publik Tahun 2025']] },
+      { i: '📈', n: 'Laporan Kinerja BPLH', d: [
+        ['lap-kinerja-2024', 'Laporan Kinerja Tahun 2024'],
+        ['lap-kinerja-2025', 'Laporan Kinerja Tahun 2025']] },
+      { i: '🏛️', n: 'Laporan Kinerja Instansi Pemerintah', d: [
+        ['lkjip-2024', 'Laporan Kinerja Instansi Pemerintah Tahun 2024'],
+        ['lkjip-2025', 'Laporan Kinerja Instansi Pemerintah Tahun 2025']] },
+      { i: '🎯', n: 'Rencana Strategis', d: [
+        ['renstra-2023', 'Rencana Strategis Tahun 2023'],
+        ['renstra-2024', 'Rencana Strategis Tahun 2024']] },
+      { i: '💧', n: 'Laporan Kualitas Air', d: [
+        ['air-laut-muara-2025', 'Laporan Pemantauan Lingkungan Perairan Laut dan Muara Teluk Jakarta Tahun 2025'],
+        ['air-situ-2025', 'Pemantauan Kualitas Lingkungan Air Situ Jakarta Tahun 2025']] },
+      { i: '💰', n: 'Laporan Keuangan', d: [
+        ['keuangan-2024', 'Laporan Keuangan BPLH Tahun 2024'],
+        ['keuangan-2025', 'Laporan Keuangan BPLH Tahun 2025']] },
+      { i: '🌫️', n: 'Laporan Kualitas Udara', d: [
+        ['udara-2024', 'Laporan Akhir Pemantauan Kualitas Udara Provinsi Jakarta Tahun 2024'],
+        ['udara-2025', 'Laporan Akhir Kegiatan Pemantauan Kualitas Udara DKI Jakarta Tahun 2025']] }
+    ];
+    var TOTAL = L.reduce(function (a, c) { return a + c.d.length; }, 0);
+    var ABC = 'abcdefghijklmnopqrstuvwxyz';
+    var furl = function (k) { return FILE_MAP[k] || (FILE_BASE + k + '.pdf'); };
+    var esc = function (s) {
+      return String(s).replace(/[&<>"]/g, function (m) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]; });
+    };
+  
+    var css = document.createElement('style');
+    css.textContent =
+      '.lp-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;margin-bottom:26px}' +
+      '.lp-top p{color:var(--mut);font-weight:600;max-width:560px}' +
+      '.lp-all{display:flex;gap:8px}' +
+      '.lp-all button{font:inherit;font-weight:700;font-size:.8rem;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--g);cursor:pointer;transition:.25s}' +
+      '.lp-all button:hover{background:var(--g);color:#fff;border-color:var(--g)}' +
+      '.lp-list{display:grid;gap:16px}' +
+      '.lp-item{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--sh);overflow:hidden;transition:border-color .3s,box-shadow .3s}' +
+      '.lp-item:hover,.lp-item.open{border-color:var(--g)}' +
+      '.lp-item.open{box-shadow:0 18px 40px rgba(10,155,74,.18)}' +
+      '.lp-row{display:flex;align-items:center;gap:16px;padding:18px 20px}' +
+      '.lp-no{flex:none;width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--g),#18c46a);color:#fff;display:grid;place-items:center;font-weight:800;box-shadow:0 6px 14px rgba(10,155,74,.3)}' +
+      '.lp-ic{flex:none;width:48px;height:48px;border-radius:16px;display:grid;place-items:center;font-size:24px;background:linear-gradient(135deg,rgba(10,155,74,.16),rgba(255,122,0,.16))}' +
+      '.lp-tt{flex:1;min-width:0}' +
+      '.lp-tt h3{font-size:1.08rem;font-weight:800;line-height:1.35}' +
+      '.lp-tt small{color:var(--mut);font-weight:600;font-size:.82rem}' +
+      '.lp-btn{flex:none;padding:11px 22px;font-size:.9rem}' +
+      '.lp-btn i{font-style:normal;display:inline-block;transition:transform .3s}' +
+      '.lp-item.open .lp-btn i{transform:rotate(180deg)}' +
+      '.lp-item.open .lp-btn{background:linear-gradient(135deg,var(--o),#ff9a3c);box-shadow:0 8px 20px rgba(255,122,0,.35)}' +
+      '.lp-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s cubic-bezier(.2,.8,.2,1)}' +
+      '.lp-item.open .lp-panel{grid-template-rows:1fr}' +
+      '.lp-in{overflow:hidden;min-height:0}' +
+      '.lp-sub{list-style:none;padding:0 20px 20px 80px;display:grid;gap:10px}' +
+      '.lp-sub li{display:flex;align-items:center;gap:14px;padding:12px 14px;border-radius:18px;background:var(--bg);border:1px solid var(--line);transition:.25s;opacity:0;transform:translateY(-8px)}' +
+      '.lp-item.open .lp-sub li{opacity:1;transform:none}' +
+      '.lp-item.open .lp-sub li:nth-child(2){transition-delay:.06s}.lp-item.open .lp-sub li:nth-child(3){transition-delay:.12s}' +
+      '.lp-sub li:hover{border-color:var(--g);transform:translateX(6px)}' +
+      '.lp-ab{flex:none;width:32px;height:32px;border-radius:50%;background:rgba(255,122,0,.14);color:var(--o);display:grid;place-items:center;font-weight:800;font-size:.85rem}' +
+      '.lp-st{flex:1;min-width:0;font-weight:600;font-size:.94rem;line-height:1.5;overflow-wrap:anywhere}' +
+      '.lp-dl{flex:none;padding:8px 16px;font-size:.8rem}' +
+      '@media (max-width:640px){' +
+        '.lp-row{flex-wrap:wrap;padding:16px}.lp-ic{display:none}.lp-tt{flex-basis:calc(100% - 70px)}' +
+        '.lp-btn{width:100%;justify-content:center}' +
+        '.lp-sub{padding:0 14px 16px}.lp-sub li{flex-wrap:wrap}.lp-dl{margin-left:46px}' +
+      '}';
+    document.head.appendChild(css);
+  
+    var laporanPage = function () {
+      var items = L.map(function (c, idx) {
+        var id = 'lp-' + idx;
+        return '<div class="lp-item rv" data-lpi>' +
+          '<div class="lp-row"><span class="lp-no">' + (idx + 1) + '</span><span class="lp-ic">' + c.i + '</span>' +
+          '<div class="lp-tt"><h3>' + esc(c.n) + '</h3><small>' + c.d.length + ' dokumen</small></div>' +
+          '<button type="button" class="btn lp-btn" data-lp="' + id + '" aria-expanded="false" aria-controls="' + id + '">Lihat <i>▾</i></button></div>' +
+          '<div class="lp-panel" id="' + id + '"><div class="lp-in"><ul class="lp-sub">' +
+          c.d.map(function (x, j) {
+            return '<li><span class="lp-ab">' + ABC[j] + '</span><span class="lp-st">' + esc(x[1]) + '</span>' +
+              '<a class="btn lp-dl" href="' + furl(x[0]) + '" target="_blank" rel="noopener" data-lpf="' + x[0] + '">&#11015; Unduh</a></li>';
+          }).join('') + '</ul></div></div></div>';
+      }).join('');
+      return hd('Informasi', 'Laporan') +
+        W('<div class="lp-top"><p>' + L.length + ' kelompok laporan, ' + TOTAL + ' dokumen. Klik tombol <b>Lihat</b> untuk menampilkan daftar dokumennya.</p>' +
+          '<div class="lp-all"><button type="button" data-lpa="open">&#9660; Buka semua</button><button type="button" data-lpa="close">&#9650; Tutup semua</button></div></div>' +
+          '<div class="lp-list">' + items + '</div>');
+    };
+  
+    function setOpen(item, open) {
+      item.classList.toggle('open', open);
+      var b = item.querySelector('.lp-btn');
+      if (b) {
+        b.setAttribute('aria-expanded', open);
+        b.firstChild.nodeValue = open ? 'Tutup ' : 'Lihat ';
+      }
+    }
+  
+    document.addEventListener('click', function (e) {
+      var t = e.target.closest && e.target.closest('[data-lp]');
+      if (t) { var it = t.closest('[data-lpi]'); setOpen(it, !it.classList.contains('open')); return; }
+      var a = e.target.closest && e.target.closest('[data-lpa]');
+      if (a) {
+        var o = a.dataset.lpa === 'open';
+        document.querySelectorAll('[data-lpi]').forEach(function (it) { setOpen(it, o); });
+        return;
+      }
+      var d = e.target.closest && e.target.closest('[data-lpf]');
+      if (d && location.protocol.indexOf('http') === 0) {
+        e.preventDefault(); // di server: cek dulu file-nya ada
+        fetch(d.href, { method: 'HEAD' }).then(function (r) {
+          if (!r.ok) { toast('File belum tersedia'); return; }
+          window.open(d.href, '_blank', 'noopener');
+        }).catch(function () { toast('File belum tersedia'); });
+      }
+    });
+  
+    function mount() {
+      P.laporan = laporanPage;
+      if (/laporan/.test(location.hash)) route();
+    }
+    try { P; mount(); }
+    catch (e) { document.addEventListener('DOMContentLoaded', mount); }
+  })();
+  </script>
+
+<!-- ===== Halaman Pengumuman (daftar + detail): tempel tepat sebelum </body>, setelah blok Laporan ===== -->
+<script>
+  /* pengumuman.js - daftar kartu + halaman detail. Menimpa P.pengumuman yang lama.
+     Tambah pengumuman: tambahkan objek baru di array PENG (id harus unik).
+     body: array paragraf. file: nama PDF di folder FILE_BASE (tanpa .pdf), atau isi FILE_MAP dengan URL penuh. */
+  (function () {
+    var FILE_BASE = 'dokumen/pengumuman/';
+    var FILE_MAP = {};
+    var HARI = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+    var BULAN = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+  
+    var PENG = [
+      { id: 1, d: '2026-10-15', cat: 'Layanan', i: '🗓️', t: 'Jadwal Layanan Selama Libur Nasional', file: 'jadwal-layanan-libur-nasional',
+        ringkas: 'Informasi penyesuaian jam layanan Biro Pembangunan dan Lingkungan Hidup selama libur nasional.',
+        body: ['Diberitahukan kepada seluruh pemangku kepentingan bahwa layanan tatap muka Biro Pembangunan dan Lingkungan Hidup akan disesuaikan selama periode libur nasional.',
+          'Layanan daring tetap dapat diakses melalui kanal resmi. Permohonan yang masuk pada masa libur akan diproses pada hari kerja pertama setelah libur berakhir.',
+          'Rincian jadwal lengkap tersedia pada dokumen terlampir.'] },
+      { id: 2, d: '2026-10-12', cat: 'Sistem', i: '🛠️', t: 'Pembaruan Sistem SIMPELMON', file: 'pembaruan-sistem-simpelmon',
+        ringkas: 'Pemberitahuan pembaruan fitur dan jadwal pemeliharaan sistem pemantauan dan evaluasi SIMPELMON.',
+        body: ['Biro Pembangunan dan Lingkungan Hidup menginformasikan adanya pembaruan sistem SIMPELMON untuk meningkatkan kinerja dan kemudahan penggunaan.',
+          'Selama proses pemeliharaan, sistem dapat sementara tidak dapat diakses. Mohon pengguna menyelesaikan penginputan data sebelum jadwal pemeliharaan.',
+          'Panduan penggunaan versi terbaru dapat diunduh pada dokumen terlampir.'] },
+      { id: 3, d: '2026-10-09', cat: 'Undangan', i: '📨', t: 'Undangan Rapat Koordinasi Bulanan', file: 'undangan-rakor-bulanan',
+        ringkas: 'Undangan rapat koordinasi bulanan bersama perangkat daerah mitra Biro Pembangunan dan Lingkungan Hidup.',
+        body: ['Dalam rangka sinkronisasi dan evaluasi program, Biro Pembangunan dan Lingkungan Hidup mengundang perangkat daerah mitra untuk menghadiri rapat koordinasi bulanan.',
+          'Agenda rapat meliputi pemantauan capaian program, tindak lanjut kendala lapangan, dan rencana kegiatan bulan berikutnya.',
+          'Surat undangan resmi beserta lampiran agenda dapat diunduh pada dokumen terlampir.'] },
+      { id: 4, d: '2026-10-06', cat: 'Hasil Seleksi', i: '🏆', t: 'Pengumuman Hasil Seleksi Kegiatan', file: 'hasil-seleksi-kegiatan',
+        ringkas: 'Hasil seleksi peserta kegiatan yang diselenggarakan oleh Biro Pembangunan dan Lingkungan Hidup.',
+        body: ['Berdasarkan hasil penilaian panitia, Biro Pembangunan dan Lingkungan Hidup mengumumkan hasil seleksi peserta kegiatan.',
+          'Peserta yang dinyatakan lolos diharapkan melakukan konfirmasi kehadiran sesuai ketentuan yang tercantum pada dokumen pengumuman.',
+          'Keputusan panitia bersifat final dan tidak dapat diganggu gugat.'] }
+    ];
+    PENG.sort(function (a, b) { return a.d < b.d ? 1 : -1; });
+  
+    var esc = function (s) {
+      return String(s).replace(/[&<>"]/g, function (m) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]; });
+    };
+    var pfind = function (id) { for (var i = 0; i < PENG.length; i++) if (PENG[i].id === +id) return PENG[i]; return null; };
+    var pd = function (s) {
+      var p = s.split('-'), d = new Date(+p[0], +p[1] - 1, +p[2]);
+      return { h: HARI[d.getDay()], d: +p[2], b: BULAN[+p[1] - 1], bs: BULAN[+p[1] - 1].slice(0, 3), y: p[0] };
+    };
+    var furl = function (a) { return FILE_MAP[a.file] || (FILE_BASE + a.file + '.pdf'); };
+  
+    var css = document.createElement('style');
+    css.textContent =
+      '.pm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:68px 32px;padding-top:36px}' +
+      '.pm-card{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:34px 20px 22px;box-shadow:var(--sh);transition:.3s}' +
+      '.pm-card:hover{transform:translateY(-6px);border-color:var(--g);box-shadow:0 18px 40px rgba(10,155,74,.18)}' +
+      '.pm-date{position:absolute;top:-34px;left:26px;z-index:2;width:112px;text-align:center;background:linear-gradient(135deg,var(--o),#ff9a3c);color:#fff;border-radius:18px;padding:10px 8px;line-height:1.15;box-shadow:0 10px 22px rgba(255,122,0,.35)}' +
+      '.pm-date small{display:block;font-weight:700;text-transform:uppercase;font-size:.74rem;letter-spacing:.04em}' +
+      '.pm-date b{display:block;font-size:1.9rem;font-weight:800}' +
+      '.pm-date span{display:block;font-size:.72rem;font-weight:600;text-transform:uppercase}' +
+      '.pm-ico{aspect-ratio:16/7;border-radius:18px;display:grid;place-items:center;font-size:3rem;background:linear-gradient(135deg,var(--g),#7ddc9b 60%,#ffd27a);margin-bottom:16px;transition:.4s}' +
+      '.pm-card:hover .pm-ico{transform:scale(1.03)}' +
+      '.pm-card .tag{align-self:flex-start;margin-bottom:8px}' +
+      '.pm-card h3{font-size:1.18rem;line-height:1.4;font-weight:800;margin-bottom:8px}' +
+      '.pm-card p{color:var(--mut);font-size:.92rem;line-height:1.65;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:18px}' +
+      '.pm-card .btn{margin-top:auto;align-self:flex-start;padding:10px 20px;font-size:.88rem}' +
+      /* detail */
+      '.pm-art{max-width:1120px;margin:0 auto}' +
+      '.pm-back{display:inline-flex;font-weight:700;color:var(--g);margin-bottom:22px;transition:.25s}.pm-back:hover{color:var(--o);transform:translateX(-4px)}' +
+      '.pm-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:36px;align-items:start}' +
+      '.pm-main{background:var(--card);border:1px solid var(--line);border-radius:28px;box-shadow:var(--sh);overflow:hidden}' +
+      '.pm-hero{padding:34px 36px 26px;background:linear-gradient(135deg,rgba(10,155,74,.16),rgba(255,122,0,.12));border-bottom:1px solid var(--line)}' +
+      '.pm-cat{display:inline-block;font-size:.76rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,var(--o),#ff9a3c);padding:6px 16px;border-radius:999px;box-shadow:0 8px 18px rgba(255,122,0,.3)}' +
+      '.pm-hero h2{font-size:clamp(1.5rem,3.4vw,2.3rem);line-height:1.25;font-weight:800;margin:16px 0 14px}' +
+      '.pm-meta{display:flex;flex-wrap:wrap;gap:10px}' +
+      '.pm-meta span{display:inline-flex;gap:8px;align-items:center;padding:7px 16px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-weight:600;font-size:.85rem;color:var(--mut)}' +
+      '.pm-body{padding:30px 36px}' +
+      '.pm-body p{font-size:1.06rem;line-height:1.9;margin-bottom:18px}' +
+      '.pm-dl{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:8px 36px 36px;padding:18px 20px;border:1px dashed var(--g);border-radius:22px;background:linear-gradient(135deg,rgba(10,155,74,.07),rgba(255,122,0,.07))}' +
+      '.pm-dl .ic{margin:0;flex:none}' +
+      '.pm-dl div{flex:1;min-width:180px}' +
+      '.pm-dl b{display:block;line-height:1.4}.pm-dl small{color:var(--mut);font-weight:600}' +
+      '.pm-aside{position:sticky;top:100px}' +
+      '.pm-sbox{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:22px;box-shadow:var(--sh)}' +
+      '.pm-sbox h4{font-size:1.05rem;font-weight:800;margin-bottom:6px;padding-bottom:12px;border-bottom:3px solid var(--o);display:inline-block}' +
+      '.pm-si{display:block;padding:14px 0;border-bottom:1px solid var(--line);transition:.25s}.pm-si:hover{padding-left:8px}' +
+      '.pm-si small{color:var(--o);font-weight:700;font-size:.78rem}' +
+      '.pm-si span{display:block;margin-top:4px;font-size:.95rem;line-height:1.45;font-weight:700}.pm-si:hover span{color:var(--g)}' +
+      '.pm-all{width:100%;justify-content:center;margin-top:18px;padding:11px 20px;font-size:.9rem}' +
+      '@media (max-width:960px){.pm-layout{grid-template-columns:1fr}.pm-aside{position:static}}' +
+      '@media (max-width:640px){.pm-grid{gap:64px 20px}.pm-hero,.pm-body{padding-left:20px;padding-right:20px}.pm-dl{margin:6px 20px 24px}.pm-dl .btn{width:100%;justify-content:center}}';
+    document.head.appendChild(css);
+  
+    function listPage() {
+      return hd('Informasi', 'Pengumuman') +
+        W('<p class="ss" style="margin-bottom:0">Informasi resmi dan pemberitahuan terbaru dari Biro Pembangunan dan Lingkungan Hidup.</p>' +
+          '<div class="pm-grid">' + PENG.map(function (a) {
+            var t = pd(a.d);
+            return '<article class="pm-card rv">' +
+              '<div class="pm-date"><small>' + t.h + '</small><b>' + t.d + '</b><span>' + t.b + ' ' + t.y + '</span></div>' +
+              '<div class="pm-ico">' + a.i + '</div>' +
+              
+              '<h3>' + esc(a.t) + '</h3><p>' + esc(a.ringkas) + '</p>' +
+              '<a class="btn o" href="#/pengumuman/' + a.id + '">Baca selengkapnya →</a></article>';
+          }).join('') + '</div>');
+    }
+  
+    function detailPage(a) {
+      var t = pd(a.d);
+      var side = PENG.filter(function (x) { return x.id !== a.id; }).slice(0, 4).map(function (x) {
+        var s = pd(x.d);
+        return '<a class="pm-si" href="#/pengumuman/' + x.id + '"><small>' + s.d + ' ' + s.bs + ' ' + s.y + '</small><span>' + esc(x.t) + '</span></a>';
+      }).join('');
+      return W('<article class="pm-art"><a class="pm-back" href="#/pengumuman">← Kembali ke pengumuman</a>' +
+        '<div class="pm-layout"><div class="pm-main">' +
+          '<div class="pm-hero"><h2>' + esc(a.t) + '</h2>' +
+            '<div class="pm-meta"><span>📅 Diunggah: ' + t.h + ', ' + t.d + ' ' + t.b + ' ' + t.y + '</span><span>📢 Pengumuman Resmi</span></div></div>' +
+          '<div class="pm-body">' + a.body.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('') + '</div>' +
+          '<div class="pm-dl"><div class="ic">📄</div><div><b>Dokumen Pengumuman</b><small>' + esc(a.t) + ' (PDF)</small></div>' +
+            '<a class="btn o pm-dlbtn" href="' + furl(a) + '" download="' + a.file + '.pdf">&#11015; Unduh Dokumen</a></div>' +
+        '</div>' +
+        '<aside class="pm-aside"><div class="pm-sbox"><h4>Pengumuman Lainnya</h4>' + side + '<a class="btn w pm-all" href="#/pengumuman">Semua pengumuman →</a></div></aside>' +
+        '</div></article>');
+    }
+  
+    var pengumumanPage = function () {
+      var m = /^#\/pengumuman\/(\d+)/.exec(location.hash), a = m && pfind(m[1]);
+      return a ? hd('Informasi', 'Detail Pengumuman') + detailPage(a) : listPage();
+    };
+  
+    document.addEventListener('click', function (e) {
+      var d = e.target.closest && e.target.closest('.pm-dlbtn');
+      if (d && location.protocol.indexOf('http') === 0) {
+        e.preventDefault(); // di server: cek dulu file-nya ada
+        fetch(d.href, { method: 'HEAD' }).then(function (r) {
+          if (!r.ok) { toast('File belum tersedia'); return; }
+          var l = document.createElement('a');
+          l.href = d.href; l.download = d.getAttribute('download');
+          document.body.appendChild(l); l.click(); l.remove();
+        }).catch(function () { toast('File belum tersedia'); });
+      }
+    });
+  
+    function mount() {
+      P.pengumuman = pengumumanPage;
+      if (/pengumuman/.test(location.hash)) route();
+    }
+    try { P; mount(); }
+    catch (e) { document.addEventListener('DOMContentLoaded', mount); }
+  })();
+  </script>
+
+  <!-- ===== Halaman Kalender Agenda: tempel tepat sebelum </body>, setelah blok Pengumuman ===== -->
+<script>
+  /* agenda.js - kalender bulanan interaktif + daftar agenda. Menimpa P.agenda yang lama.
+     Tambah agenda: tambahkan objek baru di array EV.
+     d = tanggal (YYYY-MM-DD), t = judul, w = waktu, c = kategori, i = ikon. */
+  (function () {
+    var EV = [
+      { d: '2026-10-20', t: 'Rapat Koordinasi Lingkungan Hidup', w: '09.00 WIB', c: 'Rapat', i: '🤝' },
+      { d: '2026-10-24', t: 'Monev Program Triwulan IV', w: '09.00 WIB', c: 'Monev', i: '📊' },
+      { d: '2026-10-28', t: 'Sosialisasi Layanan Digital', w: '09.00 WIB', c: 'Sosialisasi', i: '📣' },
+      { d: '2026-10-31', t: 'Evaluasi Kinerja Bulanan', w: '09.00 WIB', c: 'Evaluasi', i: '✅' }
+    ];
+    var BULAN = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+    var HARI = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+    var HDR = ['Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab', 'Min'];
+    var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+    var iso = function (y, m, d) { return y + '-' + pad(m + 1) + '-' + pad(d); };
+    var esc = function (s) {
+      return String(s).replace(/[&<>"]/g, function (m) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]; });
+    };
+    var now = new Date(), TODAY = iso(now.getFullYear(), now.getMonth(), now.getDate());
+    var st = { y: now.getFullYear(), m: now.getMonth(), sel: null };
+    EV.sort(function (a, b) { return a.d < b.d ? -1 : 1; });
+  
+    var css = document.createElement('style');
+    css.textContent =
+      '.ag-wrap{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:32px;align-items:start}' +
+      '.ag-cal{background:var(--card);border:1px solid var(--line);border-radius:28px;box-shadow:var(--sh);overflow:hidden;position:sticky;top:96px}' +
+      '.ag-ch{padding:22px 22px 18px;background:linear-gradient(135deg,var(--g2),var(--g));color:#fff;display:flex;align-items:center;justify-content:space-between;gap:10px}' +
+      '.ag-ch h3{font-size:1.25rem;font-weight:800;line-height:1.2}.ag-ch small{display:block;opacity:.85;font-weight:600;font-size:.8rem}' +
+      '.ag-nav{display:flex;gap:6px}' +
+      '.ag-nav button{font:inherit;font-weight:800;min-width:38px;height:38px;padding:0 12px;border-radius:12px;border:0;background:rgba(255,255,255,.18);color:#fff;cursor:pointer;transition:.25s}' +
+      '.ag-nav button:hover{background:#fff;color:var(--g2);transform:translateY(-2px)}' +
+      '.ag-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;padding:16px 16px 8px}' +
+      '.ag-wd{text-align:center;font-size:.72rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);padding:4px 0 8px}' +
+      '.ag-wd:nth-child(7){color:#e5484d}' +
+      '.ag-d{position:relative;aspect-ratio:1;display:grid;place-items:center;border-radius:14px;font:inherit;font-weight:700;font-size:.92rem;border:0;background:transparent;color:var(--tx);cursor:default}' +
+      '.ag-d.sun{color:#e5484d}' +
+      '.ag-d.today{box-shadow:inset 0 0 0 2px var(--g)}' +
+      '.ag-d.has{cursor:pointer;background:rgba(255,122,0,.14);color:var(--o);transition:.25s}' +
+      '.ag-d.has:hover{background:var(--o);color:#fff;transform:translateY(-3px) scale(1.06);box-shadow:0 8px 18px rgba(255,122,0,.35)}' +
+      '.ag-d.has:after{content:"";position:absolute;bottom:5px;left:50%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:currentColor}' +
+      '.ag-d.sel{background:linear-gradient(135deg,var(--o),#ff9a3c);color:#fff;box-shadow:0 8px 18px rgba(255,122,0,.4)}' +
+      '.ag-d.today.has{box-shadow:inset 0 0 0 2px var(--g)}' +
+      '.ag-d:focus-visible{outline:3px solid var(--g);outline-offset:2px}' +
+      '.ag-leg{display:flex;flex-wrap:wrap;gap:14px;padding:6px 22px 20px;color:var(--mut);font-size:.78rem;font-weight:600}' +
+      '.ag-leg span{display:inline-flex;align-items:center;gap:7px}' +
+      '.ag-leg i{width:14px;height:14px;border-radius:5px;display:inline-block}' +
+      '.ag-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}' +
+      '.ag-head h3{font-size:1.4rem;font-weight:800}' +
+      '.ag-head p{color:var(--mut);font-weight:600;font-size:.9rem}' +
+      '.ag-clear{font:inherit;font-weight:700;font-size:.82rem;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--g);cursor:pointer;transition:.25s}' +
+      '.ag-clear:hover{background:var(--g);color:#fff;border-color:var(--g)}' +
+      '.ag-list{display:grid;gap:14px}' +
+      '.ag-item{display:flex;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:16px 18px;box-shadow:var(--sh);transition:.3s}' +
+      '.ag-item:hover{transform:translateX(6px);border-color:var(--g)}' +
+      '.ag-item.past{opacity:.7}' +
+      '.ag-date{flex:none;width:68px;text-align:center;border-radius:18px;background:linear-gradient(135deg,var(--o),#ff9a3c);color:#fff;padding:10px 0;line-height:1.1;box-shadow:0 8px 18px rgba(255,122,0,.3)}' +
+      '.ag-date b{display:block;font-size:1.55rem;font-weight:800}.ag-date small{display:block;font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em}' +
+      '.ag-item.past .ag-date{background:linear-gradient(135deg,#8a9a90,#a9b8ae);box-shadow:none}' +
+      '.ag-info{flex:1;min-width:0}' +
+      '.ag-info h4{font-size:1.05rem;font-weight:800;line-height:1.4;margin-bottom:8px}' +
+      '.ag-meta{display:flex;flex-wrap:wrap;gap:8px}' +
+      '.ag-meta span{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;font-size:.78rem;font-weight:700;background:rgba(10,155,74,.12);color:var(--g)}' +
+      '.ag-meta span.c{background:rgba(255,122,0,.12);color:var(--o)}' +
+      '.ag-meta span.s{background:var(--bg);color:var(--mut);border:1px solid var(--line)}' +
+      '.ag-meta span.s.now{background:var(--g);color:#fff;border-color:transparent}' +
+      '.ag-ic{flex:none;width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:24px;background:linear-gradient(135deg,rgba(10,155,74,.16),rgba(255,122,0,.16))}' +
+      '.ag-empty{text-align:center;padding:48px 20px;background:var(--card);border:1px dashed var(--line);border-radius:24px;color:var(--mut);font-weight:600}' +
+      '.ag-empty b{display:block;font-size:2.4rem;margin-bottom:6px}' +
+      '@media (max-width:980px){.ag-wrap{grid-template-columns:1fr}.ag-cal{position:static;max-width:520px;margin:0 auto;width:100%}}' +
+      '@media (max-width:560px){.ag-ic{display:none}.ag-item{padding:14px}.ag-date{width:60px}}';
+    document.head.appendChild(css);
+  
+    function monthEvents() {
+      var p = st.y + '-' + pad(st.m + 1) + '-';
+      return EV.filter(function (e) { return e.d.indexOf(p) === 0; });
+    }
+  
+    function calHTML() {
+      var first = new Date(st.y, st.m, 1), off = (first.getDay() + 6) % 7, n = new Date(st.y, st.m + 1, 0).getDate();
+      var h = HDR.map(function (x) { return '<div class="ag-wd">' + x + '</div>'; }).join('');
+      for (var i = 0; i < off; i++) h += '<div></div>';
+      for (var d = 1; d <= n; d++) {
+        var k = iso(st.y, st.m, d), has = EV.some(function (e) { return e.d === k; });
+        var col = (off + d - 1) % 7, cls = 'ag-d' + (col === 6 ? ' sun' : '') + (k === TODAY ? ' today' : '') + (has ? ' has' : '') + (st.sel === k ? ' sel' : '');
+        h += has ? '<button type="button" class="' + cls + '" data-agd="' + k + '" aria-label="Agenda tanggal ' + d + '">' + d + '</button>'
+                 : '<div class="' + cls + '">' + d + '</div>';
+      }
+      return h;
+    }
+  
+    function listHTML() {
+      var evs = monthEvents();
+      if (st.sel) evs = evs.filter(function (e) { return e.d === st.sel; });
+      var t = st.sel ? (function () { var p = st.sel.split('-'); return HARI[new Date(+p[0], +p[1] - 1, +p[2]).getDay()] + ', ' + (+p[2]) + ' ' + BULAN[st.m] + ' ' + st.y; })() : 'Agenda ' + BULAN[st.m] + ' ' + st.y;
+      var head = '<div class="ag-head"><div><h3>' + t + '</h3><p>' + evs.length + ' kegiatan terjadwal</p></div>' +
+        (st.sel ? '<button type="button" class="ag-clear" data-agc="1">Tampilkan semua bulan ini</button>' : '') + '</div>';
+      if (!evs.length) return head + '<div class="ag-empty"><b>🗓️</b>Belum ada agenda kegiatan pada bulan ini.</div>';
+      return head + '<div class="ag-list">' + evs.map(function (e) {
+        var p = e.d.split('-'), past = e.d < TODAY, now = e.d === TODAY;
+        return '<div class="ag-item' + (past ? ' past' : '') + '"><div class="ag-date"><b>' + (+p[2]) + '</b><small>' + BULAN[+p[1] - 1].slice(0, 3) + '</small></div>' +
+          '<div class="ag-info"><h4>' + esc(e.t) + '</h4><div class="ag-meta"><span>🕘 ' + esc(e.w) + '</span><span class="c">' + esc(e.c) + '</span>' +
+          '<span class="s' + (now ? ' now' : '') + '">' + (now ? 'Hari ini' : past ? 'Selesai' : 'Akan datang') + '</span></div></div>' +
+          '<div class="ag-ic">' + e.i + '</div></div>';
+      }).join('') + '</div>';
+    }
+  
+    function render() {
+      var root = document.getElementById('ag-root');
+      if (!root) return;
+      root.innerHTML =
+        '<div class="ag-cal"><div class="ag-ch"><div><h3>' + BULAN[st.m] + ' ' + st.y + '</h3><small>' + monthEvents().length + ' agenda bulan ini</small></div>' +
+        '<div class="ag-nav"><button type="button" data-agn="-1" aria-label="Bulan sebelumnya">‹</button><button type="button" data-agn="0">Hari ini</button><button type="button" data-agn="1" aria-label="Bulan berikutnya">›</button></div></div>' +
+        '<div class="ag-grid">' + calHTML() + '</div>' +
+        '<div class="ag-leg"><span><i style="background:rgba(255,122,0,.35)"></i>Ada agenda</span><span><i style="box-shadow:inset 0 0 0 2px var(--g)"></i>Hari ini</span><span><i style="background:linear-gradient(135deg,var(--o),#ff9a3c)"></i>Dipilih</span></div></div>' +
+        '<div class="ag-side">' + listHTML() + '</div>';
+    }
+  
+    var agendaPage = function () {
+      st.y = now.getFullYear(); st.m = now.getMonth(); st.sel = null;
+      return hd('Informasi', 'Kalender Agenda') +
+        W('<p class="ss">Jadwal kegiatan Biro Pembangunan dan Lingkungan Hidup. Klik tanggal berwarna orange untuk melihat agendanya.</p><div class="ag-wrap" id="ag-root"></div>');
+    };
+  
+    document.addEventListener('click', function (e) {
+      var n = e.target.closest && e.target.closest('[data-agn]');
+      if (n) {
+        var v = +n.dataset.agn;
+        if (v === 0) { st.y = now.getFullYear(); st.m = now.getMonth(); }
+        else { st.m += v; if (st.m < 0) { st.m = 11; st.y--; } if (st.m > 11) { st.m = 0; st.y++; } }
+        st.sel = null; render(); return;
+      }
+      var d = e.target.closest && e.target.closest('[data-agd]');
+      if (d) { st.sel = st.sel === d.dataset.agd ? null : d.dataset.agd; render(); return; }
+      if (e.target.closest && e.target.closest('[data-agc]')) { st.sel = null; render(); }
+    });
+  
+    // render isi setelah router menaruh halaman ke #main
+    function mount() {
+      P.agenda = function () { return agendaPage(); };
+      if (/agenda/.test(location.hash)) route();
+    }
+    var _route = window.route;
+    window.addEventListener('hashchange', function () { setTimeout(render, 0); });
+    var obs = new MutationObserver(function () { if (document.getElementById('ag-root') && !document.querySelector('#ag-root .ag-cal')) render(); });
+    obs.observe(document.getElementById('main'), { childList: true });
+    try { P; mount(); }
+    catch (e) { document.addEventListener('DOMContentLoaded', mount); }
+  })();
+  </script>
+
+</body>
+</html>
